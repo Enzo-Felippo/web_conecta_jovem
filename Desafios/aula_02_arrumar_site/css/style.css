@@ -1,0 +1,55 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+h1 { text-align: center; color: #2c3e50; }
+
+.instrucoes {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 6px solid #3498db;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.exercicio {
+    background: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border-left: 6px solid #2c3e50;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.exercicio h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.codigo-box {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-family: 'Consolas', 'Courier New', monospace;
+    color: #d63384;
+    overflow-x: auto;
+}
+.area-professor {
+    background-color: #e8f8f5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #a3e4d7;
+}
+
+.dica-titulo {
+    font-weight: bold;
+    color: #16a085;
+    display: block;
+    margin-bottom: 5px

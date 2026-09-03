@@ -1,0 +1,41 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+}
+
+
+.item p {
+  margin: 10;
+}
+
+#categoria{
+    display: flex;
+    align-items: baseline;
+    gap: 35px;
+}
+
+.categoria-armas {
+    background-color: lightgoldenrodyellow;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.categoria-armaduras {
+    background-color: lightblue;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.categoria-acessorios {
+    background-color: lightgreen;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.categoria-consumiveis {
+    background-color: lightpink;
+    padding: 30px;
+    border-radius: 15px;
+}

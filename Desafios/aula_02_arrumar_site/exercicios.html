@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio: Operação Código Limpo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Desafio de Semântica HTML (Aula 02)</h1>
+
+    <div class="instrucoes">
+        <p><strong>Instruções:</strong> Analise os códigos abaixo. Substitua as <code>div</code> genéricas pelas tags
+            semânticas corretas quando necessário (ex: <code>header</code>, <code>nav</code>, <code>main</code>,
+            <code>article</code>, <code>section</code>, <code>aside</code>, <code>footer</code>, <code>ul/li</code>,
+            etc.).</p>
+        <p>⚠️ <strong>Atenção:</strong> Nem toda div precisa ser trocada! Algumas são estruturais.</p>
+    </div>
+
+    <div class="exercicio" id="exercicio-1">
+        <h2>Exercício 1: O Cabeçalho com Decoração</h2>
+        <div class="codigo-box">
+            &lt;div class="cabecalho-site"&gt;
+            &lt;div class="faixa-decorativa-azul"&gt;&lt;/div&gt;
+            &lt;h1&gt;Blog do Zeca&lt;/h1&gt;
+            &lt;/div&gt;
+        </div>
+    </div>
+
+    <div class="exercicio" id="exercicio-2">
+        <h2>Exercício 2: Menu de Navegação</h2>
+        <div class="codigo-box">
+            &lt;div class="menu-principal"&gt;
+            &lt;a href="#"&gt;Home&lt;/a&gt; | &lt;a href="#"&gt;Sachês&lt;/a&gt; | &lt;a href="#"&gt;Contato&lt;/a&gt;
+            &lt;/div&gt;
+        </div>
+    </div>
+
+    <div class="exercicio" id="exercicio-3">
+        <h2>Exercício 3: O Banner "Hero"</h2>
+        <div class="codigo-box">
+            &lt;div class="banner-destaque"&gt;
+            &lt;h2&gt;Promoção Relâmpago&lt;/h2&gt;
+            &lt;p&gt;50% OFF em arranhadores.&lt;/p&gt;
+            &lt;div class="botao-link" onclick="location.href='ofertas.html'"&gt;Ver Ofertas&lt;/div&gt;
+            &lt;/div&gt;
+        </div>
+    </div>
+
+    <div class="exercicio" id="exercicio-4">
+        <h2>Exercício 4: Conteúdo Principal</h2>
+        <div class="codigo-box">
+            &lt;div class="conteudo-global"&gt;
+            &lt;h2&gt;Bem-vindo ao mundo dos felinos&lt;/h2&gt;
+            &lt;p&gt;Aqui você aprende tudo sobre gatos.&lt;/p&gt;
+            &lt;/div&gt;
+        </div>
+    </div>
+
+    <div class="exercicio" id="exercicio-5">
+        <h2>Exercício 5: Lista de Vantagens</h2>
+        <div class="codigo-box">
+            &lt;div class="lista-beneficios"&gt;
+            &lt;div class="item"&gt;Zero Odores&lt;/div&gt;
+            &lt;div class="item"&gt;Biodegradável&lt;/div&gt;
+            &lt;div class="item"&gt;Econômica&lt;/div&gt;
+            &lt;/div&gt;
+        </div>
+    </div>
+
+    <div class="exercicio" id="exercicio-6">
+        <h2>Exercício 6: Post de Blog (Independente)</h2>
+        <div class="codigo-box">
+            &lt;div class="postagem-noticia"&gt;
+            &lt;h3&gt;Gato descobre gravidade&lt;/h3&gt;
+            &lt;p&gt;Ao derrubar um copo, Zeca provou a lei de Newton...&lt;/p&gt;
+            &lt;/div&gt;
+        </div>
+    </div>
+
+    <div class="exercicio" id="exercicio-7">
+        <h2>Exercício 7: Barra Lateral (Sidebar)</h2>
+        <div class="codigo-box">
+            &lt;div class="coluna-direita"&gt;
+            &lt;h3&gt;Categorias&lt;/h3&gt;
+            &lt;div class="lista-categorias"&gt;
+            &lt;a href="#"&gt;Rações&lt;/a&gt;&lt;br&gt;
+            &lt;a href="#"&gt;Brinquedos&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+        </div>
+    </div>
+
+    <div class="exercicio" id="exercicio-8">
+        <h2>Exercício 8: Imagem com Legenda</h2>
+        <div class="codigo-box">
+            &lt;div class="moldura-foto"&gt;
+            &lt;img src="zeca.jpg" alt="Gato"&gt;
+            &lt;div class="texto-legenda"&gt;Figura 1: Zeca em repouso.&lt;/div&gt;
+            &lt;/div&gt;
+        </div>
+    </div>
+
+    <div class="exercicio" id="exercicio-9">
+        <h2>Exercício 9: Rodapé</h2>
+        <div class="codigo-box">
+            &lt;div class="area-final"&gt;
+            &lt;p&gt;&copy; 2026 Zeca Corp.&lt;/p&gt;
+            &lt;/div&gt;
+        </div>
+    </div>
+
+    <div class="exercicio" id="exercicio-10">
+        <h2>Exercício 10: Endereço da Empresa</h2>
+        <div class="codigo-box">
+            &lt;div class="dados-contato"&gt;
+            Rua da UFMT, Bloco TI - Cuiabá/MT
+            &lt;/div&gt;
+        </div>
+    </div>
+
+    <div class="exercicio" id="exercicio-11">
+        <h2>Exercício 11: Data de Publicação</h2>
+        <div class="codigo-box">
+            &lt;p&gt;Publicado em: &lt;span class="data"&gt;12/05/2026&lt;/span&gt;&lt;/p&gt;
+        </div>
+    </div>
+
+    <div class="exercicio" id="exercicio-12">
+        <h2>Exercício 12: Citação (Depoimento)</h2>
+        <div class="codigo-box">
+            &lt;div class="depoimento-box"&gt;
+            "Este é o melhor site que já vi!"
+            &lt;/div&gt;
+            &lt;div class="autor"&gt;- Maria, aluna de SI&lt;/div&gt;
+        </div>
+    </div>
+
+    <div class="exercicio" id="exercicio-13">
+        <h2>Exercício 13: Botão de Ação Real</h2>
+        <div class="codigo-box">
+            &lt;div class="btn-login" onclick="abrirModal()"&gt;
+            Acessar Conta
+            &lt;/div&gt;
+        </div>
+    </div>
+
+    <div class="exercicio" id="exercicio-14">
+        <h2>Exercício 14: Container de Layout (Pegadinha)</h2>
+        <div class="codigo-box">
+            &lt;div class="container-centralizador"&gt;
+            &lt;p&gt;Conteúdo do site...&lt;/p&gt;
+            &lt;/div&gt;
+        </div>
+    </div>
+
+    <div class="exercicio" id="exercicio-15">
+        <h2>Exercício 15: Redes Sociais</h2>
+        <div class="codigo-box">
+            &lt;div class="social-midia"&gt;
+            &lt;div class="icone"&gt;Instagram&lt;/div&gt;
+            &lt;div class="icone"&gt;LinkedIn&lt;/div&gt;
+            &lt;div class="icone"&gt;GitHub&lt;/div&gt;
+            &lt;/div&gt;
+        </div>
+    </div>
+
+</body>
+
+</html>
