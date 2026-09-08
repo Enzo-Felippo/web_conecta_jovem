@@ -1,0 +1,73 @@
+/*
+--------------------- Menu principal do site
+*/
+body{
+    margin: 0;
+}
+header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: space-between;
+    background-color: black;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+header nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+    text-decoration: none;
+}
+
+header nav img {
+    width: auto;
+    height: 30px;
+}
+
+#menu {
+    background-color: aquamarine;
+}
+
+#outraClasse {
+    background-color: yellow;
+}
+
+/*
+--------------------- Conteúdo principal do site
+*/
+main {
+    margin: 10px;
+}
+
+/*
+--------------------- Estilos das tabelas 
+*/
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+table img {
+    width: auto;
+    height: 25px;
+}
+
+tr:nth-child(even) {
+    background-color: lightgoldenrodyellow;
+}
+
+#headerTable {
+    background-color: lightblue;
+}
