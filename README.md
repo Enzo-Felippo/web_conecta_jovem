@@ -13,5 +13,16 @@
 # web_conecta_jovem
 Repositório das minhas aulas
 
+<h2>Sites especiais:</h2>
+<p><a href="https://emojipedia.org/">Emojipedia</a>: Melhor site para encontrar emojis</p>
 
+<h3>Imagens</h3>
+<p><a href="https://unsplash.com/">Unsplash</a>: Fonte de recursos visuais de maior destaque da internet</p>
+<p><a href="https://www.pexels.com/">Pexels</a>: Fotos profissionais gratuitas e imagens e vídeos livres de royalties</p>
 
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
