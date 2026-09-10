@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Formulário: Curso de culinária para bruxas</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#">Cursos</a>
+            <a href="#">Blog</a>
+            <a href="#">Sobre</a>
+        </nav>
+        <nav>
+            <img src="img/logo.png" alt="logo">
+        </nav>
+    </header>
+    <main>
+        <form action="">
+            <h1>Curso de culinária para bruxas</h1>
+            <div>
+                <!--Campo do Nome-->
+                <label for="name">Nome: </label>
+                <input type="text" name="nome" id="nome" placeholder="Seu nome">
+
+                <!--Campo do Telefone-->
+                <label for="telefone">Telefone: </label>
+                <input type="tel" name="telefone" id="telefone" placeholder="(00) 0 0000-0000">
+
+            </div>
+
+            <div>
+                <!--Campo do Email-->
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="seuemail@gmail.com">
+
+                <!--Campo de calderão-->
+                <label for="caldeirao">Caldeirão: </label>
+                <select name="caldeirao" id="caldeirao">
+                    <option value="caldeirao_bruxa_tradicional">Caldeirão de bruxa tradicional</option>
+                    <option value="caldeirao_3_pes">Caldeirão com 3 pés</option>
+                    <option value="caldeirao_lua_crescente">Caldeirão com lua crescente</option>
+                    <option value="caldeirao_magico_com_fumaca">Caldeirão mágico com fumaça</option>
+                    <option value="caldeirao_com_alcas">Caldeirão com alças</option>
+                </select>
+            </div>
+
+            <!--Campo de retrições-->
+            <label for="restricao">Restrições: </label>
+            <textarea name="restricao" id="restricao" cols="100" rows="10"></textarea>
+
+            <!--Botão de enviar-->
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <nav>
+            <a href="#">Cursos</a>
+            <a href="#">Blog</a>
+            <a href="#">Sobre</a>
+        </nav>
+        <nav>
+            <img src="img/logo.png" alt="logo">
+        </nav>
+
+    </footer>
+</body>
+
+</html>

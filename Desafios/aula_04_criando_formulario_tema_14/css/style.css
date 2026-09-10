@@ -1,0 +1,167 @@
+
+/*
+    Geral
+*/
+
+*{
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+h1 {
+    color: #E83D72;
+}
+/*
+    Header do site
+*/
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: space-between;
+    background-color: rgb(224, 128, 212);
+}
+
+header nav {
+    display: flex;
+    gap: 25px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+header nav a {
+    font-weight: 700;
+    gap: 10px;
+    color: inherit;
+    text-decoration: none;
+}
+
+header nav img {
+    width: auto;
+    height: 45px;
+}
+
+/*
+    Formulário
+*/
+
+body {
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+form div{
+    display: flex;
+    gap: inherit;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label {
+    color: #6D2C91;
+    font-weight: 600;
+}
+
+input, select {
+    border-radius: 15px;
+    border-color:fuchsia;
+    padding: 10px;
+}
+
+input:focus, select:focus{
+    background-color: #E6E6FA;
+    border-color: rgb(78, 39, 99);
+    outline: none;
+}
+
+input:hover, select:hover{
+    background-color: #fae6e6;
+    border-color: blueviolet;
+}
+
+textarea {
+    padding: 5px;
+    border-radius: 10px;
+    border-color:fuchsia;
+    border-width: 2px;
+}
+textarea:focus{
+    border-color:#814f9c;
+    outline: none;
+}
+
+button{
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    border-color: greenyellow;
+    background-color: rgb(206, 255, 133);
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+button:hover{
+    background-color: lightgreen;
+}
+
+/*
+    Footer do site
+*/
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: space-between;
+    background-color: rgb(224, 128, 212);
+}
+
+footer nav {
+    display: flex;
+    gap: 25px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+footer nav a {
+    gap: 10px;
+    color: inherit;
+    text-decoration: none;
+}
+
+footer nav img {
+    width: auto;
+    height: 100px;
+}
