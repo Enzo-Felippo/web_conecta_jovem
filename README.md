@@ -20,8 +20,9 @@ Repositório das minhas aulas
 <p><a href="https://unsplash.com/">Unsplash</a>: Fonte de recursos visuais de maior destaque da internet</p>
 <p><a href="https://www.pexels.com/">Pexels</a>: Fotos profissionais gratuitas e imagens e vídeos livres de royalties</p>
 
-<p><a href=""></a></p>
-<p><a href=""></a></p>
+<h3>Logos e icones</h3>
+<p><a href="https://www.iconarchive.com/">Iconarchive</a>: Icones e logos gratuitos para baixar online</p>
+<p><a href="https://favicon.io/">Favicon</a>: Melhor gerador de icones apartir de outros formatos</p>
 <p><a href=""></a></p>
 <p><a href=""></a></p>
 <p><a href=""></a></p>
