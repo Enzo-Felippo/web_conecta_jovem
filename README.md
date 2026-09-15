@@ -16,14 +16,26 @@ Repositório das minhas aulas
 <h2>Sites especiais:</h2>
 <p><a href="https://emojipedia.org/">Emojipedia</a>: Melhor site para encontrar emojis</p>
 
+<hr>
+<h3>Cores</h3>
+<p><a href="https://coolors.co/">Coolors</a>: Criar paletas de cores manualmente ou a partir de imagens</p>
+<p><a href="https://colorhunt.co/">Color hunt</a>: Proucurar paletas de cores</p>
+
+<hr>
 <h3>Imagens</h3>
 <p><a href="https://unsplash.com/">Unsplash</a>: Fonte de recursos visuais de maior destaque da internet</p>
 <p><a href="https://www.pexels.com/">Pexels</a>: Fotos profissionais gratuitas e imagens e vídeos livres de royalties</p>
 
+<hr>
 <h3>Logos e icones</h3>
 <p><a href="https://www.iconarchive.com/">Iconarchive</a>: Icones e logos gratuitos para baixar online</p>
-<p><a href="https://favicon.io/">Favicon</a>: Melhor gerador de icones apartir de outros formatos</p>
-<p><a href=""></a></p>
-<p><a href=""></a></p>
+<p><a href="https://favicon.io/">Favicon</a>: Melhor gerador de icones a partir de outros formatos</p>
+
+<hr>
+<h3>Animações com css e js</h3>
+<p><a href="https://animista.net/">Animista</a>: Biblioteca de animações com css</p>
+<p><a href="https://css-tricks.com/">CSS Tricks</a>: Funções com CSS para animações</p>
+<p><a href="https://shadergradient.co/">Shader gradient</a>: Animações com JS e CSS para gradientes animados</p>
+<p><a href="https://animejs.com/">Anime JS</a>: Animações dinâmicas usando JS e CSS</p>
 <p><a href=""></a></p>
 <p><a href=""></a></p>
