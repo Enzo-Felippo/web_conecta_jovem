@@ -79,14 +79,27 @@ form {
 
 form div{
     display: flex;
-    gap: inherit;
-    justify-content: space-between;
     align-items: center;
 }
 
 label {
     color: #6D2C91;
     font-weight: 600;
+}
+
+.input{
+    background-color: #c890e6;
+    border: 1px;
+    border-color:fuchsia;
+    border-radius: 15px;
+}
+
+.input i {
+    padding: 5px;
+}
+
+.conteiner {
+    gap: inherit;
 }
 
 input, select {
