@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <title>Semântica do HTML5</title>
+</head>
+
+<body>
+  <header>
+    <h1>&lt;header&gt;</h1>
+    <p>
+      Essas tags definem um cabeçalho. Portanto, todo conteúdo que estiver
+      dentro dela faz parte de um cabeçalho, podendo ser utilizado dentro de
+      outras sessões.
+    </p>
+    <p>&lt;nav&gt;</p>
+    <p>
+      Essa tag define um conteúdo de navegação. Portanto, é muito utilizado em
+      conjunto com listas e na criação de menus;
+    </p>
+    <nav>
+      <a href="#">Link</a>
+    </nav>
+  </header>
+  <main>
+    <h1>&lt;main&gt;</h1>
+    <p>
+      Essas tags representam o conteúdo principal do seu corpo, ou seja, o
+      conteúdo relacionado diretamente com o tópico central da página ou com a
+      funcionalidade central da aplicação;
+    </p>
+
+    <p>&lt;strong&gt;</p>
+    <p>tag semântica para <strong>negrito</strong></p>
+
+    <p>&lt;b&gt;</p>
+    <p>tag não semântica para <b>negrito</b></p>
+
+    <p>&lt;em&gt;</p>
+    <p>tag semântica para <em>itálico</em></p>
+
+    <p>&lt;i&gt;</p>
+    <p>tag não semântica para <i>itálico</i></p>
+
+    <p>&lt;ins&gt;</p>
+    <p>tag semântica para <ins>sublinhado</ins></p>
+
+    <p>&lt;u&gt;</p>
+    <p>tag não semântica para <u>sublinhado</u></p>
+
+    <p>
+      A tag <mark>&lt;Mark&gt;</mark> possui um propósito semântico bem
+      definido: ela serve para destacar ou realçar um trecho de texto por
+      motivos de relevância contextual
+    </p>
+
+    <p>
+      A tag <del>&lt;del&gt;</del>: Ela é utilizada para indicar que um texto
+      foi removido ou deletado de um documento. Geralmente, os navegadores
+      renderizam o texto dentro dela com um efeito de riscado (taxado).
+    </p>
+    <p>&lt;<small>small</small>&gt;</p>
+    <p>
+      Significado semântico: No HTML5, ela não serve apenas para diminuir o
+      tamanho da letra. Ela indica que o texto possui importância secundária
+      ou lateral.
+    </p>
+
+    <p>&lt;sup&gt;</p>
+    <p>tag para inserir coisas do tipo: x<sup>20</sup>+3</p>
+
+    <p>&lt;sub&gt;</p>
+    <p>tag para inserir coisas do tipo: H<sub>2</sub>O</p>
+
+    <p>
+      Exemplos de uso: Notas de rodapé, avisos legais, termos de uso e
+      direitos autorais (copyright).
+    </p>
+    <h1>HTML5 foca em significado, não em forma</h1>
+    <p>Títulos vão de &lt;h1&gt; até &lt;h6&gt;</p>
+    <h1>Título de nível 1</h1>
+    <h2>Título de nível 2</h2>
+    <h3>Título de nível 3</h3>
+    <h4>Título de nível 4</h4>
+    <h5>Título de nível 5</h5>
+    <h6>Título de nível 6</h6>
+    <section>
+      <p>&lt;section&gt;</p>
+      <p>Essas tags definem uma sessão para sua página;</p>
+    </section>
+    <article>
+      <p>&lt;article&gt;</p>
+      <p>
+        Essas tags definem um artigo da sua página. Nesse sentido, são
+        utilizadas para separar o conteúdo da sua página. Muito utilizado
+        principalmente por blogs ou páginas de conteúdo
+      </p>
+    </article>
+    <aside>
+      <p>&lt;aside&gt;</p>
+      <p>
+        Essas tags representam uma seção de uma página cujo conteúdo é
+        tangencialmente relacionado ao conteúdo do seu entorno, que poderia
+        ser considerado separado do conteúdo;
+      </p>
+    </aside>
+    <div>
+      <p>&lt;div&gt;</p>
+      <p>
+        Define uma divisão da página. Desta forma, funciona como um container
+        para conteúdo de fluxo. Uma vez que não possui um valor semântico, é
+        muito utilizado para organizar melhor o conteúdo. Anteriormente ao
+        HTML5, era utilizado no lugar das categorias acima.
+      </p>
+    </div>
+
+    <p>&lt;span&gt;</p>
+    <span>
+      Apesar de ter uma funcionalidade e características parecidas com os
+      parágrafos, costumam ser utilizadas apenas para pequenas informações,
+      como legendas de um formulário, legendas de uma imagem, etc. Também pode
+      ser utilizada para formar um container;
+    </span>
+
+    <p>&lt;pre&gt;</p>
+    <p>
+      Tag utilizada para representar texto pré-formatado. Muito utilizada para
+      inserir códigos;
+    </p>
+    <pre>print("Hello World!")</pre>
+    <h1>Outras formatações</h1>
+    <h2>Código fonte</h2>
+    <p> A tag &lt;code&gt; serve para mostrar códigos <code>print("Hello World!")</code> </p>
+    <pre> <code> nome = input("Digite seu nome: ") print(f"Olá {nome}") </code> </pre>
+    <h2>Citações</h2>
+    <p>Como diria o chaves: <q>Prefiro morrer do que perder a vida</q></p>
+    <h3>Citações completas</h3>
+    <p>Segundo Jeff Noble, no seu livro HTML para Leigos:</p>
+    <blockquote
+      cite="https://books.google.com.br/books?id=E8ZtDwAAQBAJ&pg=PA17&dq=HTML&hl=pt-BR&sa=X&ved=0ahUKEwjH5-PevNboAhVNIbkGHcoxC0gQ6AEI0jAC#v=onepage&q=HTML&f=false">
+      A diferença entre elementos inline e um bloco de texto é importante. Os elementos HTML nesse capítulo descrevem os
+      blocos de texto. </blockquote>
+    <h2>Abreviações</h2>
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr
+        title="Cascading Style Sheets">CSS</abbr>. Estou adorando!</p>
+    <p>Minha lista ordenada:</p>
+    <ol>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ol>
+
+    <p>Minha lista não ordenada:</p>
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+  </main>
+  <footer>
+    <h1>&lt;footer&gt;</h1>
+    <p>
+      Essas tags definem um rodapé para a página, geralmente utilizadas no
+      final da página;
+    </p>
+    <h2>&lt;address&gt;</h2>
+    <p>Meu endereço, pode abrir no google maps em alguns navegadores</p>
+    <address>Rua 25, Pedra 90 - Coxipó da Ponte, Cuiabá - MT</address>
+  </footer>
+</body>
+
+</html>

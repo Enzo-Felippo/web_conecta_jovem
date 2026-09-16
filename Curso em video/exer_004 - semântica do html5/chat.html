@@ -1,0 +1,1100 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <title>Guia de Semântica HTML5</title>
+</head>
+
+<body>
+  <!-- =========================
+       CABEÇALHO
+  ========================== -->
+
+  <header class="topo">
+    <div class="topo-conteudo">
+      <h1>📚 Semântica do HTML5</h1>
+
+      <p>
+        Um guia visual das principais tags HTML5 estudadas, mostrando o
+        significado, a utilização e exemplos práticos de cada elemento.
+      </p>
+
+      <span class="tag-destaque">
+        HTML5 → significado antes da aparência
+      </span>
+    </div>
+  </header>
+
+  <!-- =========================
+       LAYOUT PRINCIPAL
+  ========================== -->
+
+  <div class="layout">
+    <!-- MENU LATERAL -->
+
+    <nav class="menu">
+      <h2>📖 Conteúdo</h2>
+
+      <ul>
+        <li>
+          <a href="#estrutura">Estrutura</a>
+        </li>
+
+        <li>
+          <a href="#texto">Texto</a>
+        </li>
+
+        <li>
+          <a href="#titulos">Títulos</a>
+        </li>
+
+        <li>
+          <a href="#secoes">Seções</a>
+        </li>
+
+        <li>
+          <a href="#div-span">Div e Span</a>
+        </li>
+
+        <li>
+          <a href="#pre">Texto pré-formatado</a>
+        </li>
+
+        <li>
+          <a href="#outras-formatacoes">Outras formatações</a>
+        </li>
+        
+        <li>
+          <a href="#listas">Listas</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- CONTEÚDO -->
+
+    <main>
+      <!-- =========================
+           ESTRUTURA
+      ========================== -->
+
+      <section id="estrutura" class="secao">
+        <div class="secao-titulo">
+          <h2>🏗️ Estrutura semântica</h2>
+
+          <p>
+            Elementos utilizados para organizar as grandes partes de uma
+            página HTML.
+          </p>
+        </div>
+
+        <!-- HEADER -->
+
+        <article class="card">
+          <span class="badge estrutura"> ESTRUTURA </span>
+
+          <h3>&lt;header&gt;</h3>
+
+          <p>
+            Define um cabeçalho. O conteúdo dentro dele pode representar
+            informações introdutórias ou de navegação relacionadas à página ou
+            a uma seção.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">VISUALIZAÇÃO</div>
+
+            <div class="exemplo-conteudo">
+              <header>
+                <h3>Meu site</h3>
+
+                <p>Bem-vindo ao meu conteúdo.</p>
+              </header>
+            </div>
+          </div>
+
+          <pre><code>&lt;header&gt;
+  &lt;h1&gt;Meu site&lt;/h1&gt;
+  &lt;p&gt;Bem-vindo ao meu conteúdo.&lt;/p&gt;
+&lt;/header&gt;</code></pre>
+        </article>
+
+        <!-- NAV -->
+
+        <article class="card">
+          <span class="badge semantica"> SEMÂNTICA </span>
+
+          <h3>&lt;nav&gt;</h3>
+
+          <p>
+            Representa uma seção de navegação. É muito utilizada para menus e
+            conjuntos de links importantes.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">VISUALIZAÇÃO</div>
+
+            <div class="exemplo-conteudo">
+              <nav>
+                <a href="#">🏠 Início</a> | <a href="#">📚 Cursos</a> |
+                <a href="#">📞 Contato</a>
+              </nav>
+            </div>
+          </div>
+
+          <pre><code>&lt;nav&gt;
+  &lt;a href="#"&gt;Início&lt;/a&gt;
+  &lt;a href="#"&gt;Cursos&lt;/a&gt;
+  &lt;a href="#"&gt;Contato&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+        </article>
+
+        <!-- MAIN -->
+
+        <article class="card">
+          <span class="badge estrutura"> ESTRUTURA </span>
+
+          <h3>&lt;main&gt;</h3>
+
+          <p>
+            Representa o conteúdo principal da página. Deve conter aquilo que
+            está diretamente relacionado ao objetivo central daquele
+            documento.
+          </p>
+
+          <pre><code>&lt;main&gt;
+  Conteúdo principal da página
+&lt;/main&gt;</code></pre>
+        </article>
+
+        <!-- FOOTER -->
+
+        <article class="card">
+          <span class="badge estrutura"> ESTRUTURA </span>
+
+          <h3>&lt;footer&gt;</h3>
+
+          <p>
+            Representa o rodapé de uma página ou seção. É comum encontrar
+            informações como direitos autorais, contatos e links adicionais.
+          </p>
+
+          <pre><code>&lt;footer&gt;
+  &lt;p&gt;© 2026 Meu Site&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+        </article>
+      </section>
+
+      <!-- =========================
+           TEXTO
+      ========================== -->
+
+      <section id="texto" class="secao">
+        <div class="secao-titulo">
+          <h2>✍️ Formatação semântica de texto</h2>
+
+          <p>
+            Algumas tags não servem apenas para mudar a aparência: elas dão
+            significado ao texto.
+          </p>
+        </div>
+
+        <!-- STRONG -->
+
+        <article class="card">
+          <span class="badge semantica"> SEMÂNTICA </span>
+
+          <h3>&lt;strong&gt;</h3>
+
+          <p>
+            Indica que determinado trecho possui forte importância, seriedade
+            ou urgência.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">RESULTADO</div>
+
+            <div class="exemplo-conteudo">
+              Este é um
+              <strong>texto importante.</strong>
+            </div>
+          </div>
+
+          <pre><code>&lt;strong&gt;texto importante&lt;/strong&gt;</code></pre>
+        </article>
+
+        <!-- B -->
+
+        <article class="card">
+          <span class="badge nao-semantica"> NÃO SEMÂNTICA </span>
+
+          <h3>&lt;b&gt;</h3>
+
+          <p>
+            Aplica destaque visual em negrito, mas não adiciona significado
+            semântico de importância.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">RESULTADO</div>
+
+            <div class="exemplo-conteudo">
+              Este é um
+              <b>texto em negrito.</b>
+            </div>
+          </div>
+
+          <pre><code>&lt;b&gt;texto em negrito&lt;/b&gt;</code></pre>
+        </article>
+
+        <!-- EM -->
+
+        <article class="card">
+          <span class="badge semantica"> SEMÂNTICA </span>
+
+          <h3>&lt;em&gt;</h3>
+
+          <p>Representa ênfase em determinado trecho.</p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">RESULTADO</div>
+
+            <div class="exemplo-conteudo">
+              Isso é
+              <em>muito importante.</em>
+            </div>
+          </div>
+
+          <pre><code>&lt;em&gt;muito importante&lt;/em&gt;</code></pre>
+        </article>
+
+        <!-- I -->
+
+        <article class="card">
+          <span class="badge nao-semantica"> NÃO SEMÂNTICA </span>
+
+          <h3>&lt;i&gt;</h3>
+
+          <p>
+            Representa uma mudança de voz ou um texto que deve ser visualmente
+            diferenciado, sem necessariamente indicar ênfase.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">RESULTADO</div>
+
+            <div class="exemplo-conteudo">
+              <i>Termo estrangeiro</i>
+            </div>
+          </div>
+
+          <pre><code>&lt;i&gt;Termo estrangeiro&lt;/i&gt;</code></pre>
+        </article>
+
+        <!-- INS -->
+
+        <article class="card">
+          <span class="badge semantica"> SEMÂNTICA </span>
+
+          <h3>&lt;ins&gt;</h3>
+
+          <p>Representa um trecho que foi inserido no documento.</p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">RESULTADO</div>
+
+            <div class="exemplo-conteudo">
+              Este texto foi
+              <ins>adicionado posteriormente.</ins>
+            </div>
+          </div>
+
+          <pre><code>&lt;ins&gt;adicionado posteriormente&lt;/ins&gt;</code></pre>
+        </article>
+
+        <!-- U -->
+
+        <article class="card">
+          <span class="badge nao-semantica"> NÃO SEMÂNTICA </span>
+
+          <h3>&lt;u&gt;</h3>
+
+          <p>
+            Representa uma anotação ou destaque visual sublinhado. Não deve
+            ser usado simplesmente como substituto de estilos quando CSS é
+            apropriado.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">RESULTADO</div>
+
+            <div class="exemplo-conteudo">
+              <u>Texto sublinhado</u>
+            </div>
+          </div>
+
+          <pre><code>&lt;u&gt;Texto sublinhado&lt;/u&gt;</code></pre>
+        </article>
+
+        <!-- MARK -->
+
+        <article class="card">
+          <span class="badge semantica"> SEMÂNTICA </span>
+
+          <h3>&lt;mark&gt;</h3>
+
+          <p>Destaca um trecho por sua relevância dentro do contexto.</p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">RESULTADO</div>
+
+            <div class="exemplo-conteudo">
+              Este trecho é
+              <mark>relevante para o assunto.</mark>
+            </div>
+          </div>
+
+          <pre><code>&lt;mark&gt;relevante para o assunto&lt;/mark&gt;</code></pre>
+        </article>
+
+        <!-- DEL -->
+
+        <article class="card">
+          <span class="badge semantica"> SEMÂNTICA </span>
+
+          <h3>&lt;del&gt;</h3>
+
+          <p>
+            Indica que determinado conteúdo foi removido ou considerado
+            excluído.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">RESULTADO</div>
+
+            <div class="exemplo-conteudo">
+              Preço:
+              <del>R$ 100</del>
+              R$ 80
+            </div>
+          </div>
+
+          <pre><code>&lt;del&gt;R$ 100&lt;/del&gt; R$ 80</code></pre>
+        </article>
+
+        <!-- SMALL -->
+
+        <article class="card">
+          <span class="badge semantica"> SEMÂNTICA </span>
+
+          <h3>&lt;small&gt;</h3>
+
+          <p>
+            Representa observações, comentários, avisos legais, direitos
+            autorais ou informações secundárias.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">RESULTADO</div>
+
+            <div class="exemplo-conteudo">
+              <small> © 2026 — Todos os direitos reservados. </small>
+            </div>
+          </div>
+
+          <pre><code>&lt;small&gt;
+  © 2026 — Todos os direitos reservados.
+&lt;/small&gt;</code></pre>
+        </article>
+
+        <!-- SUP -->
+
+        <article class="card">
+          <span class="badge semantica"> SEMÂNTICA </span>
+
+          <h3>&lt;sup&gt;</h3>
+
+          <p>
+            Exibe um conteúdo em posição superior à linha normal. É útil para
+            expoentes e referências.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">RESULTADO</div>
+
+            <div class="exemplo-conteudo">x<sup>20</sup> + 3</div>
+          </div>
+
+          <pre><code>x&lt;sup&gt;20&lt;/sup&gt; + 3</code></pre>
+        </article>
+
+        <!-- SUB -->
+
+        <article class="card">
+          <span class="badge semantica"> SEMÂNTICA </span>
+
+          <h3>&lt;sub&gt;</h3>
+
+          <p>
+            Exibe um conteúdo abaixo da linha normal. É bastante utilizado em
+            fórmulas químicas.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">RESULTADO</div>
+
+            <div class="exemplo-conteudo">H<sub>2</sub>O</div>
+          </div>
+
+          <pre><code>H&lt;sub&gt;2&lt;/sub&gt;O</code></pre>
+        </article>
+      </section>
+
+      <!-- =========================
+           TÍTULOS
+      ========================== -->
+
+      <section id="titulos" class="secao">
+        <div class="secao-titulo">
+          <h2>📑 Títulos</h2>
+
+          <p>Os títulos estabelecem uma hierarquia de conteúdo.</p>
+        </div>
+
+        <article class="card">
+          <span class="badge semantica"> HIERARQUIA </span>
+
+          <h3>&lt;h1&gt; até &lt;h6&gt;</h3>
+
+          <p>
+            Os elementos de título vão de
+            <span class="codigo-inline">&lt;h1&gt;</span>
+            até
+            <span class="codigo-inline">&lt;h6&gt;</span>. Eles representam
+            diferentes níveis hierárquicos.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">HIERARQUIA VISUAL</div>
+
+            <div class="exemplo-conteudo">
+              <h1>Título nível 1</h1>
+              <h2>Título nível 2</h2>
+              <h3>Título nível 3</h3>
+              <h4>Título nível 4</h4>
+              <h5>Título nível 5</h5>
+              <h6>Título nível 6</h6>
+            </div>
+          </div>
+
+          <pre><code>&lt;h1&gt;Título nível 1&lt;/h1&gt;
+&lt;h2&gt;Título nível 2&lt;/h2&gt;
+&lt;h3&gt;Título nível 3&lt;/h3&gt;
+&lt;h4&gt;Título nível 4&lt;/h4&gt;
+&lt;h5&gt;Título nível 5&lt;/h5&gt;
+&lt;h6&gt;Título nível 6&lt;/h6&gt;</code></pre>
+        </article>
+      </section>
+
+      <!-- =========================
+           SEÇÕES
+      ========================== -->
+
+      <section id="secoes" class="secao">
+        <div class="secao-titulo">
+          <h2>🧩 Seções de conteúdo</h2>
+
+          <p>
+            Elementos que ajudam a dividir semanticamente diferentes partes do
+            documento.
+          </p>
+        </div>
+
+        <!-- SECTION -->
+
+        <article class="card">
+          <span class="badge semantica"> SEMÂNTICA </span>
+
+          <h3>&lt;section&gt;</h3>
+
+          <p>
+            Representa uma seção temática do conteúdo. Normalmente possui um
+            título próprio.
+          </p>
+
+          <pre><code>&lt;section&gt;
+
+  &lt;h2&gt;Meus estudos&lt;/h2&gt;
+
+  &lt;p&gt;
+    Conteúdo sobre programação.
+  &lt;/p&gt;
+
+&lt;/section&gt;</code></pre>
+        </article>
+
+        <!-- ARTICLE -->
+
+        <article class="card">
+          <span class="badge semantica"> SEMÂNTICA </span>
+
+          <h3>&lt;article&gt;</h3>
+
+          <p>
+            Representa um conteúdo independente, que poderia ser distribuído
+            ou reutilizado separadamente. É comum em posts, notícias e
+            artigos.
+          </p>
+
+          <pre><code>&lt;article&gt;
+
+  &lt;h2&gt;Aprendendo HTML&lt;/h2&gt;
+
+  &lt;p&gt;
+    HTML define a estrutura das páginas.
+  &lt;/p&gt;
+
+&lt;/article&gt;</code></pre>
+        </article>
+
+        <!-- ASIDE -->
+
+        <article class="card">
+          <span class="badge semantica"> SEMÂNTICA </span>
+
+          <h3>&lt;aside&gt;</h3>
+
+          <p>
+            Representa conteúdo relacionado de forma indireta ao conteúdo
+            principal.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">EXEMPLO</div>
+
+            <div class="exemplo-conteudo">
+              <aside>
+                💡 <strong>Curiosidade:</strong>
+
+                <p>HTML significa HyperText Markup Language.</p>
+              </aside>
+            </div>
+          </div>
+
+          <pre><code>&lt;aside&gt;
+  &lt;strong&gt;Curiosidade:&lt;/strong&gt;
+  &lt;p&gt;HTML significa HyperText Markup Language.&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+        </article>
+      </section>
+
+      <!-- =========================
+           DIV E SPAN
+      ========================== -->
+
+      <section id="div-span" class="secao">
+        <div class="secao-titulo">
+          <h2>📦 Containers: div e span</h2>
+
+          <p>
+            Elementos genéricos utilizados principalmente para agrupar
+            conteúdo.
+          </p>
+        </div>
+
+        <!-- DIV -->
+
+        <article class="card">
+          <span class="badge nao-semantica"> NÃO SEMÂNTICA </span>
+
+          <h3>&lt;div&gt;</h3>
+
+          <p>
+            É um container genérico para conteúdo de fluxo. Não possui
+            significado semântico próprio e é muito utilizado para organização
+            e estilização com CSS.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">EXEMPLO</div>
+
+            <div class="exemplo-conteudo">
+              <div>
+                <strong>Grupo de conteúdo</strong>
+
+                <p>Estes elementos estão agrupados dentro de uma div.</p>
+              </div>
+            </div>
+          </div>
+
+          <pre><code>&lt;div&gt;
+
+  &lt;strong&gt;Grupo de conteúdo&lt;/strong&gt;
+
+  &lt;p&gt;
+    Estes elementos estão agrupados.
+  &lt;/p&gt;
+
+&lt;/div&gt;</code></pre>
+        </article>
+
+        <!-- SPAN -->
+
+        <article class="card">
+          <span class="badge nao-semantica"> NÃO SEMÂNTICA </span>
+
+          <h3>&lt;span&gt;</h3>
+
+          <p>
+            É um container genérico para conteúdo em linha. É útil para
+            selecionar pequenos trechos de texto e aplicar estilos ou
+            comportamentos.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">EXEMPLO</div>
+
+            <div class="exemplo-conteudo">
+              Aprender
+              <span style="color: #2563eb; font-weight: bold"> HTML </span>
+              é aprender a estruturar documentos.
+            </div>
+          </div>
+
+          <pre><code>Aprender
+&lt;span&gt;HTML&lt;/span&gt;
+é aprender a estruturar documentos.</code></pre>
+        </article>
+      </section>
+
+      <!-- =========================
+           PRE
+      ========================== -->
+
+      <section id="pre" class="secao">
+        <div class="secao-titulo">
+          <h2>💻 Texto pré-formatado</h2>
+
+          <p>
+            Elemento especialmente interessante para representar textos nos
+            quais espaços e quebras de linha devem ser preservados.
+          </p>
+        </div>
+
+        <article class="card">
+          <span class="badge semantica"> PRÉ-FORMATADO </span>
+
+          <h3>&lt;pre&gt;</h3>
+
+          <p>
+            Preserva espaços e quebras de linha do conteúdo. É muito utilizado
+            para exibir código e textos pré-formatados.
+          </p>
+
+          <div class="exemplo">
+            <div class="exemplo-titulo">RESULTADO</div>
+
+            <div class="exemplo-conteudo">
+              <pre>
+print("Hello World!")
+
+nome = "Enzo"
+
+print(nome)</pre>
+            </div>
+          </div>
+
+          <pre><code>&lt;pre&gt;
+print("Hello World!")
+
+nome = "Enzo"
+
+print(nome)
+&lt;/pre&gt;</code></pre>
+        </article>
+      </section>
+      <!-- =========================
+     OUTRAS FORMATAÇÕES
+========================== -->
+
+      <section id="outras-formatacoes" class="secao">
+
+        <div class="secao-titulo">
+
+          <h2>🛠️ Outras formatações</h2>
+
+          <p>
+            Elementos utilizados para representar código,
+            citações e abreviações de maneira semântica.
+          </p>
+
+        </div>
+
+
+        <!-- =========================
+       CODE
+  ========================== -->
+
+        <article class="card">
+
+          <span class="badge semantica">
+            SEMÂNTICA
+          </span>
+
+          <h3>&lt;code&gt;</h3>
+
+          <p>
+            A tag
+            <span class="codigo-inline">&lt;code&gt;</span>
+            representa um trecho de código de computador.
+            Por padrão, o navegador utiliza uma fonte monoespaçada.
+          </p>
+
+          <div class="exemplo">
+
+            <div class="exemplo-titulo">
+              RESULTADO
+            </div>
+
+            <div class="exemplo-conteudo">
+
+              Execute
+              <code>print("Hello World!")</code>
+              no Python.
+
+            </div>
+
+          </div>
+
+          <pre><code>&lt;code&gt;print("Hello World!")&lt;/code&gt;</code></pre>
+
+        </article>
+
+
+        <!-- =========================
+       PRE + CODE
+  ========================== -->
+
+        <article class="card">
+
+          <span class="badge semantica">
+            SEMÂNTICA
+          </span>
+
+          <h3>&lt;pre&gt; + &lt;code&gt;</h3>
+
+          <p>
+            A combinação de
+            <span class="codigo-inline">&lt;pre&gt;</span>
+            com
+            <span class="codigo-inline">&lt;code&gt;</span>
+            é muito utilizada para representar blocos de código.
+            O
+            <span class="codigo-inline">&lt;pre&gt;</span>
+            preserva os espaços e as quebras de linha,
+            enquanto o
+            <span class="codigo-inline">&lt;code&gt;</span>
+            identifica o conteúdo como código.
+          </p>
+
+          <div class="exemplo">
+
+            <div class="exemplo-titulo">
+              RESULTADO
+            </div>
+
+            <div class="exemplo-conteudo">
+
+              <pre><code>nome = input("Digite seu nome: ")
+
+print(f"Olá {nome}")</code></pre>
+
+            </div>
+
+          </div>
+
+          <pre><code>&lt;pre&gt;
+  &lt;code&gt;
+nome = input("Digite seu nome: ")
+print(f"Olá {nome}")
+  &lt;/code&gt;
+&lt;/pre&gt;</code></pre>
+
+          <p>
+            💡 <strong>Resumo:</strong>
+            <span class="codigo-inline">&lt;code&gt;</span>
+            identifica código;
+            <span class="codigo-inline">&lt;pre&gt;</span>
+            preserva a formatação original.
+          </p>
+
+        </article>
+
+
+        <!-- =========================
+       Q
+  ========================== -->
+
+        <article class="card">
+
+          <span class="badge semantica">
+            SEMÂNTICA
+          </span>
+
+          <h3>&lt;q&gt;</h3>
+
+          <p>
+            A tag
+            <span class="codigo-inline">&lt;q&gt;</span>
+            representa uma citação curta que faz parte de um
+            parágrafo. Os navegadores normalmente adicionam
+            aspas automaticamente.
+          </p>
+
+          <div class="exemplo">
+
+            <div class="exemplo-titulo">
+              RESULTADO
+            </div>
+
+            <div class="exemplo-conteudo">
+
+              Como diria o Chaves:
+              <q>Prefiro morrer do que perder a vida.</q>
+
+            </div>
+
+          </div>
+
+          <pre><code>&lt;p&gt;
+  Como diria o Chaves:
+  &lt;q&gt;Prefiro morrer do que perder a vida.&lt;/q&gt;
+&lt;/p&gt;</code></pre>
+
+        </article>
+
+
+        <!-- =========================
+       BLOCKQUOTE
+  ========================== -->
+
+        <article class="card">
+
+          <span class="badge semantica">
+            SEMÂNTICA
+          </span>
+
+          <h3>&lt;blockquote&gt;</h3>
+
+          <p>
+            Representa uma citação longa ou um trecho de outro
+            documento. Diferentemente de
+            <span class="codigo-inline">&lt;q&gt;</span>,
+            normalmente ocupa um bloco próprio.
+          </p>
+
+          <div class="exemplo">
+
+            <div class="exemplo-titulo">
+              RESULTADO
+            </div>
+
+            <div class="exemplo-conteudo">
+
+              <p>
+                Segundo Jeff Noble, no seu livro
+                <em>HTML para Leigos</em>:
+              </p>
+
+              <blockquote
+                cite="https://books.google.com.br/books?id=E8ZtDwAAQBAJ&pg=PA17&dq=HTML&hl=pt-BR&sa=X&ved=0ahUKEwjH5-PevNboAhVNIbkGHcoxC0gQ6AEI0jAC#v=onepage&q=HTML&f=false">
+
+                A diferença entre elementos inline e um bloco
+                de texto é importante. Os elementos HTML nesse
+                capítulo descrevem os blocos de texto.
+
+              </blockquote>
+
+            </div>
+
+          </div>
+
+          <pre><code>&lt;p&gt;
+  Segundo Jeff Noble, no seu livro
+  HTML para Leigos:
+&lt;/p&gt;
+
+&lt;blockquote cite="URL"&gt;
+  A diferença entre elementos inline e um
+  bloco de texto é importante.
+&lt;/blockquote&gt;</code></pre>
+
+          <p>
+            🔗 O atributo
+            <span class="codigo-inline">cite</span>
+            pode indicar a fonte ou URL de onde a citação foi retirada.
+          </p>
+
+        </article>
+
+
+        <!-- =========================
+       ABBR
+  ========================== -->
+
+        <article class="card">
+
+          <span class="badge semantica">
+            SEMÂNTICA
+          </span>
+
+          <h3>&lt;abbr&gt;</h3>
+
+          <p>
+            Representa uma abreviação ou sigla. O atributo
+            <span class="codigo-inline">title</span>
+            pode fornecer a forma completa ou uma explicação.
+          </p>
+
+          <div class="exemplo">
+
+            <div class="exemplo-titulo">
+              PASSE O MOUSE SOBRE AS SIGLAS
+            </div>
+
+            <div class="exemplo-conteudo">
+
+              Estou estudando
+              <abbr title="HyperText Markup Language">HTML</abbr>
+              e
+              <abbr title="Cascading Style Sheets">CSS</abbr>.
+
+              Estou adorando!
+
+            </div>
+
+          </div>
+
+          <pre><code>&lt;p&gt;
+
+  Estou estudando
+  &lt;abbr title="HyperText Markup Language"&gt;
+    HTML
+  &lt;/abbr&gt;
+
+  e
+
+  &lt;abbr title="Cascading Style Sheets"&gt;
+    CSS
+  &lt;/abbr&gt;.
+
+&lt;/p&gt;</code></pre>
+
+          <p>
+            💡 <strong>Detalhe interessante:</strong>
+            ao passar o mouse sobre
+            <span class="codigo-inline">HTML</span>
+            ou
+            <span class="codigo-inline">CSS</span>,
+            o navegador pode mostrar o conteúdo do atributo
+            <span class="codigo-inline">title</span>.
+          </p>
+
+        </article>
+
+      </section>
+
+      <!-- =========================
+           LISTAS
+      ========================== -->
+
+      <section id="listas" class="secao">
+        <div class="secao-titulo">
+          <h2>📋 Listas</h2>
+
+          <p>
+            HTML possui elementos específicos para representar listas
+            ordenadas e não ordenadas.
+          </p>
+        </div>
+
+        <article class="card">
+          <h3>&lt;ol&gt; — Lista ordenada</h3>
+
+          <p>Utilizada quando a ordem dos itens possui significado.</p>
+
+          <div class="lista-exemplo">
+            <div>
+              <strong>Resultado:</strong>
+
+              <ol>
+                <li>Estudar HTML</li>
+                <li>Estudar CSS</li>
+                <li>Estudar JavaScript</li>
+              </ol>
+            </div>
+          </div>
+
+          <pre><code>&lt;ol&gt;
+
+  &lt;li&gt;Estudar HTML&lt;/li&gt;
+  &lt;li&gt;Estudar CSS&lt;/li&gt;
+  &lt;li&gt;Estudar JavaScript&lt;/li&gt;
+
+&lt;/ol&gt;</code></pre>
+        </article>
+
+        <article class="card">
+          <h3>&lt;ul&gt; — Lista não ordenada</h3>
+
+          <p>
+            Utilizada quando a ordem dos itens não possui significado
+            específico.
+          </p>
+
+          <div class="lista-exemplo">
+            <div>
+              <strong>Resultado:</strong>
+
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </div>
+
+          <pre><code>&lt;ul&gt;
+
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+
+&lt;/ul&gt;</code></pre>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <!-- =========================
+       RODAPÉ
+  ========================== -->
+
+  <footer>
+    <div class="footer-conteudo">
+      <h2>&lt;footer&gt;</h2>
+
+      <p>
+        O rodapé normalmente contém informações complementares sobre o
+        documento ou seção.
+      </p>
+
+      <address>Exemplo de endereço: Rua 25, Pedra 90 — Cuiabá - MT</address>
+    </div>
+  </footer>
+</body>
+
+</html>
