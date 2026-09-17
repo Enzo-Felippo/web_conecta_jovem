@@ -1,0 +1,179 @@
+/*
+  calc.css
+  Aqui fica a APARÊNCIA da calculadora: cores, fontes, espaçamento e layout.
+*/
+
+/* Reset simples: ajuda a evitar diferenças entre navegadores */
+* {
+  box-sizing: border-box; /* Faz padding/borda contarem dentro do tamanho do elemento */
+  margin: 0;              /* Remove margens padrão */
+  padding: 0;             /* Remove espaçamentos padrão */
+}
+
+body {
+  /* Fonte simples e legível */
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Fundo suave para destacar o "cartão" */
+  background-color: #f3f6fb;
+
+  /* Cor padrão do texto */
+  color: #1f2a44;
+
+  /* Centraliza o cartão no meio da tela */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Um respiro em telas pequenas */
+  padding: 16px;
+}
+
+.card {
+  /* Cartão branco com borda suave */
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  /* Espaçamento interno */
+  padding: 20px;
+
+  /* Sombra leve para destacar */
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+  /* Título com espaço abaixo */
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #52607a;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+}
+
+.campos {
+  /* Coloca os dois campos em coluna (um abaixo do outro) */
+  display: grid;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.campo label {
+  /* Label em cima do input */
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.campo input {
+  /* Input com largura total */
+  width: 100%;
+  padding: 10px 12px;
+
+  /* Borda e cantos arredondados */
+  border: 1px solid #cfd8e3;
+  border-radius: 10px;
+
+  /* Fonte confortável para digitar */
+  font-size: 1rem;
+}
+
+/* Efeito quando o usuário clica no campo */
+.campo input:focus {
+  outline: none;                 /* Remove a borda padrão do navegador */
+  border-color: #2563eb;         /* Borda azul */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); /* Brilho suave */
+}
+
+.botoes {
+  /* Grade com botões */
+  display: grid;
+
+  /* 4 botões por linha (em telas maiores) */
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.btn {
+  /* Botão com boa área de clique */
+  padding: 12px 0;
+
+  /* Sem borda padrão */
+  border: none;
+  border-radius: 10px;
+
+  /* Cor e texto */
+  background-color: #2563eb;
+  color: #ffffff;
+
+  /* Cursor de clique */
+  cursor: pointer;
+
+  /* Texto um pouco mais forte */
+  font-weight: bold;
+  font-size: 1rem;
+
+  /* Transição suave no hover */
+  transition: transform 0.1s ease, filter 0.2s ease;
+}
+
+.btn:hover {
+  /* Escurece um pouco ao passar o mouse */
+  filter: brightness(0.92);
+
+  /* Sobe levemente (feedback visual) */
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  /* Ao clicar, "desce" um pouco */
+  transform: translateY(0px);
+}
+
+/* Botão de limpar ocupa a linha toda */
+.limpar {
+  /* Faz o botão pegar as 4 colunas */
+  grid-column: 1 / -1;
+
+  /* Cor diferente para deixar claro que é outra ação */
+  background-color: #ef4444;
+}
+
+.saida {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 14px;
+}
+
+.mensagem {
+  /* Área para mensagens de erro/sucesso */
+  min-height: 20px; /* Reserva espaço mesmo quando estiver vazio */
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.resultado {
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+/* Responsivo: em telas pequenas, botões viram 2 colunas */
+@media (max-width: 360px) {
+  .botoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .limpar {
+    grid-column: 1 / -1;
+  }
+}

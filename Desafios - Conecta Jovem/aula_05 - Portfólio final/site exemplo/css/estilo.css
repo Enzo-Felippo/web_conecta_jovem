@@ -1,0 +1,587 @@
+/*
+  estilo.css
+  Tema escuro moderno + detalhes neon (ciano/verde)
+  Layout responsivo, cards, botões, barras de habilidade e efeitos suaves
+*/
+
+/* =========================
+   VARIÁVEIS (cores e tamanhos)
+   ========================= */
+:root{
+  /* Cores principais (dark + neon) */
+  --bg: #07121b;               /* fundo principal */
+  --bg-2: #050c13;             /* variação do fundo */
+  --card: rgba(9, 21, 31, 0.78); /* cartão com transparência */
+  --borda: rgba(255,255,255,0.08);
+
+  --texto: #e8f0ff;            /* texto principal */
+  --texto-2: rgba(232,240,255,0.72);
+
+  --neon: #18e0ff;             /* ciano */
+  --neon-2: #2dff8f;           /* verde */
+
+  --sombra: 0 10px 30px rgba(0,0,0,0.35);
+
+  --raio: 16px;                /* bordas arredondadas */
+  --container: 1100px;         /* largura máxima do conteúdo */
+}
+
+/* =========================
+   RESET BÁSICO
+   ========================= */
+*{
+  box-sizing: border-box; /* evita “estourar” largura com padding/borda */
+}
+
+html{
+  scroll-behavior: smooth; /* rolagem suave ao clicar nas âncoras */
+}
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(24,224,255,0.10), transparent 55%),
+              radial-gradient(900px 500px at 80% 20%, rgba(45,255,143,0.08), transparent 55%),
+              linear-gradient(180deg, var(--bg), var(--bg-2));
+  line-height: 1.6;
+}
+
+/* Fundo decorativo “glow” */
+.bg-glow{
+  position: fixed;
+  inset: 0;
+  pointer-events: none; /* não atrapalha cliques */
+  background:
+    radial-gradient(800px 400px at 50% 0%, rgba(24,224,255,0.12), transparent 60%),
+    radial-gradient(700px 400px at 60% 40%, rgba(45,255,143,0.08), transparent 60%);
+  filter: blur(0.2px);
+  z-index: -1; /* fica atrás de tudo */
+}
+
+/* Container central */
+.container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* =========================
+   TOPO (HEADER FIXO)
+   ========================= */
+.topo{
+  position: sticky; /* fica no topo ao rolar */
+  top: 0;
+  z-index: 10;
+  background: rgba(6, 12, 18, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--borda);
+}
+
+.topo__conteudo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 0;
+}
+
+/* Logo */
+.logo{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+
+.logo__ponto{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--neon), var(--neon-2));
+  box-shadow: 0 0 18px rgba(24,224,255,0.45);
+}
+
+/* Botão do menu (mobile) */
+.menu-toggle{
+  display: none; /* só aparece em telas pequenas */
+  background: transparent;
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.menu-toggle__bar{
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 4px 0;
+  background: var(--texto);
+  opacity: 0.85;
+}
+
+/* Navegação */
+.nav__lista{
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link{
+  color: var(--texto-2);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  padding: 8px 10px;
+  border-radius: 12px;
+  transition: background .2s ease, color .2s ease, transform .1s ease;
+}
+
+.nav__link:hover{
+  background: rgba(255,255,255,0.06);
+  color: var(--texto);
+  transform: translateY(-1px);
+}
+
+/* Link ativo (seção atual) */
+.nav__link.ativo{
+  color: var(--texto);
+  background: rgba(24,224,255,0.12);
+  border: 1px solid rgba(24,224,255,0.25);
+}
+
+/* =========================
+   HERO
+   ========================= */
+.hero{
+  padding: 70px 0 40px;
+}
+
+.hero__grid{
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.hero__texto{
+  text-align: center; /* parecido com a imagem: foco central */
+  padding: 10px 0;
+}
+
+/* Ícone circular */
+.hero__icon{
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  color: var(--neon);
+  border: 2px solid rgba(24,224,255,0.35);
+  box-shadow: 0 0 30px rgba(24,224,255,0.20);
+  background: rgba(8, 20, 30, 0.55);
+}
+
+.hero__titulo{
+  margin: 0;
+  font-size: 2.6rem;
+  letter-spacing: 0.3px;
+  background: linear-gradient(90deg, var(--neon), var(--neon-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__subtitulo{
+  margin: 8px 0 12px;
+  font-weight: bold;
+  color: var(--texto-2);
+}
+
+.hero__descricao{
+  max-width: 680px;
+  margin: 0 auto 18px;
+  color: var(--texto-2);
+}
+
+/* Botões */
+.hero__acoes{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 14px;
+  padding: 11px 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform .12s ease, filter .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.btn--primario{
+  color: #041018;
+  background: linear-gradient(90deg, var(--neon), var(--neon-2));
+  box-shadow: 0 12px 30px rgba(24,224,255,0.18);
+}
+
+.btn--primario:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+
+.btn--secundario{
+  color: var(--texto);
+  background: rgba(255,255,255,0.04);
+  border-color: var(--borda);
+}
+
+.btn--secundario:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.07);
+}
+
+.btn--full{
+  width: 100%;
+}
+
+/* Badges (mini-cards) */
+.hero__badges{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.badge{
+  border: 1px solid var(--borda);
+  background: rgba(255,255,255,0.03);
+  border-radius: var(--raio);
+  padding: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+}
+
+.badge__titulo{
+  display: block;
+  font-size: 0.8rem;
+  color: rgba(232,240,255,0.60);
+  margin-bottom: 4px;
+}
+
+.badge__texto{
+  display: block;
+  font-weight: bold;
+}
+
+/* Cards */
+.card{
+  border: 1px solid var(--borda);
+  background: var(--card);
+  border-radius: var(--raio);
+  padding: 18px;
+  box-shadow: var(--sombra);
+}
+
+.card__titulo{
+  margin: 0 0 10px;
+}
+
+.card__texto{
+  margin: 0 0 14px;
+  color: var(--texto-2);
+}
+
+/* Lista com check (simples) */
+.lista-check{
+  margin: 0 0 14px;
+  padding-left: 18px;
+  color: var(--texto-2);
+}
+.lista-check li{
+  margin: 6px 0;
+}
+
+/* =========================
+   SEÇÕES
+   ========================= */
+.secao{
+  padding: 42px 0;
+}
+
+.secao__cabecalho{
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.secao__titulo{
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.secao__descricao{
+  margin: 8px auto 0;
+  max-width: 760px;
+  color: var(--texto-2);
+}
+
+/* =========================
+   PROJETOS
+   ========================= */
+.grid-projetos{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.projeto__topo{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.tag{
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(24,224,255,0.12);
+  border: 1px solid rgba(24,224,255,0.22);
+  color: var(--texto);
+}
+
+.tag--outline{
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--borda);
+  color: var(--texto-2);
+}
+
+.projeto__titulo{
+  margin: 0 0 8px;
+}
+
+.projeto__texto{
+  margin: 0 0 14px;
+  color: var(--texto-2);
+}
+
+.projeto__acoes{
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Link com “cara” de UI moderna */
+.link{
+  color: var(--neon);
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0.92;
+}
+
+.link:hover{
+  text-decoration: underline;
+  opacity: 1;
+}
+
+/* =========================
+   HABILIDADES (BARRAS)
+   ========================= */
+.habilidades{
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.skill{
+  margin: 12px 0;
+}
+
+.skill__linha{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.skill__nome{
+  color: var(--texto);
+}
+
+.skill__valor{
+  color: rgba(232,240,255,0.75);
+}
+
+.skill__barra{
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid var(--borda);
+  overflow: hidden; /* “corta” a barra interna certinha */
+}
+
+.skill__progresso{
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--neon), var(--neon-2));
+  box-shadow: 0 0 18px rgba(24,224,255,0.25);
+  transition: width 1.2s ease; /* anima quando o JS muda o width */
+}
+
+/* =========================
+   CONTATO
+   ========================= */
+.grid-contato{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.lista-links{
+  padding-left: 18px;
+  color: var(--texto-2);
+}
+
+.lista-links li{
+  margin: 10px 0;
+}
+
+.mini{
+  color: rgba(232,240,255,0.65);
+  font-size: 0.9rem;
+}
+
+/* Form */
+.label{
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+  color: rgba(232,240,255,0.85);
+}
+
+.input, .textarea{
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--borda);
+  background: rgba(255,255,255,0.03);
+  color: var(--texto);
+  padding: 12px 12px;
+  outline: none;
+}
+
+/* Efeito ao focar (pseudoclasse :focus) */
+.input:focus, .textarea:focus{
+  border-color: rgba(24,224,255,0.55);
+  box-shadow: 0 0 0 4px rgba(24,224,255,0.10);
+}
+
+.textarea{
+  min-height: 120px;
+  resize: vertical; /* permite redimensionar para cima/baixo */
+}
+
+.feedback{
+  margin: 12px 0 0;
+  font-weight: bold;
+  min-height: 22px; /* evita “pular” layout quando aparece texto */
+}
+
+/* =========================
+   RODAPÉ
+   ========================= */
+.rodape{
+  border-top: 1px solid var(--borda);
+  background: rgba(6, 12, 18, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 16px 0;
+}
+
+.rodape__conteudo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: rgba(232,240,255,0.75);
+}
+
+.voltar-topo{
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: var(--texto);
+  border: 1px solid var(--borda);
+  background: rgba(255,255,255,0.03);
+}
+
+.voltar-topo:hover{
+  background: rgba(255,255,255,0.07);
+}
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+@media (max-width: 900px){
+  .hero__grid{
+    grid-template-columns: 1fr; /* hero vira 1 coluna */
+  }
+
+  .grid-projetos{
+    grid-template-columns: 1fr; /* projetos em coluna */
+  }
+
+  .hero__badges{
+    grid-template-columns: 1fr; /* badges em coluna */
+  }
+
+  .grid-contato{
+    grid-template-columns: 1fr; /* contato em coluna */
+  }
+
+  /* Menu mobile */
+  .menu-toggle{
+    display: inline-block;
+  }
+
+  .nav{
+    position: absolute;
+    top: 60px;
+    right: 18px;
+    left: 18px;
+    background: rgba(6, 12, 18, 0.92);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    padding: 10px;
+    display: none; /* fechado por padrão */
+  }
+
+  .nav.aberto{
+    display: block; /* abre quando o JS adiciona a classe */
+  }
+
+  .nav__lista{
+    flex-direction: column;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,322 @@
+<!--
+  index.html
+  Portfólio da pessoa desenvolvedora: Ada Maria
+  Tecnologias: HTML5 + CSS3 + JavaScript (arquivos separados)
+
+  Observação:
+  - Todo o layout e estilos estão em "estilo.css"
+  - Toda a interatividade está em "script.js"
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Ajusta o site para funcionar bem em celular (responsivo) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Portfólio | Ada Maria</title>
+
+  <!-- Conecta o CSS externo -->
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+
+<body>
+  <!-- Fundo decorativo (efeitos de "glow") -->
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- Cabeçalho fixo com menu -->
+  <header class="topo" id="topo">
+    <div class="container topo__conteudo">
+      <!-- Logo/nome curto -->
+      <a class="logo" href="#inicio" aria-label="Ir para o início">
+        <span class="logo__ponto"></span>
+        Ada Maria
+      </a>
+
+      <!-- Botão do menu mobile (aparece em telas pequenas) -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir/fechar menu" aria-expanded="false">
+        <!-- Ícone simples feito com CSS (3 barrinhas) -->
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </button>
+
+      <!-- Navegação -->
+      <nav class="nav" id="nav">
+        <ul class="nav__lista">
+          <!-- Cada link aponta para uma seção (âncora) -->
+          <li><a class="nav__link ativo" href="#inicio">Início</a></li>
+          <li><a class="nav__link" href="#projetos">Projetos</a></li>
+          <li><a class="nav__link" href="#habilidades">Habilidades</a></li>
+          <li><a class="nav__link" href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <!-- Seção: Início (Hero) -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__texto">
+          <!-- Ícone central (círculo com símbolo) -->
+          <div class="hero__icon" aria-hidden="true">
+            &lt;/&gt;
+          </div>
+
+          <h1 class="hero__titulo">Ada Maria</h1>
+          <p class="hero__subtitulo">Desenvolvedora Web Front-end</p>
+
+          <p class="hero__descricao">
+            Crio experiências web modernas, rápidas e responsivas.
+            Trabalho com HTML, CSS e JavaScript para transformar ideias em interfaces claras e atraentes.
+          </p>
+
+          <!-- Botões principais -->
+          <div class="hero__acoes">
+            <a class="btn btn--primario" href="#projetos">Ver Projetos</a>
+            <a class="btn btn--secundario" href="#contato">Entrar em Contato</a>
+          </div>
+
+          <!-- Mini infos (estilo “cards” pequenos) -->
+          <div class="hero__badges">
+            <div class="badge">
+              <span class="badge__titulo">Foco</span>
+              <span class="badge__texto">UI + Front-end</span>
+            </div>
+            <div class="badge">
+              <span class="badge__titulo">Entrega</span>
+              <span class="badge__texto">Sites responsivos</span>
+            </div>
+            <div class="badge">
+              <span class="badge__titulo">Diferencial</span>
+              <span class="badge__texto">Código limpo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna direita: “cartão” de destaque -->
+        <aside class="card destaque">
+          <h2 class="card__titulo">Disponível para freelas</h2>
+          <p class="card__texto">
+            Quer um site profissional para seu negócio, portfólio ou projeto?
+            Me chame e vamos planejar uma solução sob medida.
+          </p>
+
+          <!-- Lista curta de serviços -->
+          <ul class="lista-check">
+            <li>Landing pages para vendas</li>
+            <li>Portfólios e páginas pessoais</li>
+            <li>Melhorias em sites existentes</li>
+          </ul>
+
+          <a class="btn btn--primario btn--full" href="#contato">Solicitar orçamento</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Seção: Projetos -->
+    <section class="secao" id="projetos">
+      <div class="container">
+        <header class="secao__cabecalho">
+          <h2 class="secao__titulo">Projetos</h2>
+          <p class="secao__descricao">
+            Alguns exemplos do que eu consigo construir no front-end (layout + interatividade).
+          </p>
+        </header>
+
+        <!-- Grade de cards de projetos -->
+        <div class="grid-projetos">
+          <!-- Projeto 1 -->
+          <article class="card projeto">
+            <div class="projeto__topo">
+              <span class="tag">Landing Page</span>
+              <span class="tag tag--outline">Responsivo</span>
+            </div>
+
+            <h3 class="projeto__titulo">Página para Loja de Roupas</h3>
+            <p class="projeto__texto">
+              Layout moderno, seção de produtos, botão de compra e foco em conversão.
+            </p>
+
+            <div class="projeto__acoes">
+              <!-- Links de exemplo (troque para seus links reais) -->
+              <a class="link" href="loja.html" aria-label="Abrir demonstração do projeto 1" target="_blank">Ver demonstração</a>
+              
+            </div>
+          </article>
+
+          <!-- Projeto 2 -->
+          <article class="card projeto">
+            <div class="projeto__topo">
+              <span class="tag">Widget</span>
+              <span class="tag tag--outline">JavaScript</span>
+            </div>
+
+            <h3 class="projeto__titulo">Calculadora Simples</h3>
+            <p class="projeto__texto">
+              Interface clara, operações básicas e validações (ex.: impedir divisão por zero).
+            </p>
+
+            <div class="projeto__acoes">
+              <a class="link" href="calc.html" aria-label="Abrir demonstração do projeto 2" target="_blank">Ver demonstração</a>
+           
+            </div>
+          </article>
+
+          <!-- Projeto 3 -->
+          <article class="card projeto">
+            <div class="projeto__topo">
+              <span class="tag">Jogo</span>
+              <span class="tag tag--outline">Interativo</span>
+            </div>
+
+            <h3 class="projeto__titulo">Mini Game (Snake)</h3>
+            <p class="projeto__texto">
+              Teclado para controlar, pontuação e lógica de colisão.
+            </p>
+
+            <div class="projeto__acoes">
+              <a class="link" href="snake.html" aria-label="Abrir demonstração do projeto 3" target="_blank">Ver demonstração</a>
+              
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Habilidades (barras) -->
+    <section class="secao" id="habilidades">
+      <div class="container">
+        <header class="secao__cabecalho">
+          <h2 class="secao__titulo">Habilidades</h2>
+          <p class="secao__descricao">
+            Uma forma visual de mostrar meus principais conhecimentos.
+          </p>
+        </header>
+
+        <div class="card habilidades">
+          <!-- Cada linha tem um nome + porcentagem + barra -->
+          <div class="skill">
+            <div class="skill__linha">
+              <span class="skill__nome">HTML5</span>
+              <span class="skill__valor" data-target="95">0%</span>
+            </div>
+            <div class="skill__barra">
+              <div class="skill__progresso" data-target="95" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__linha">
+              <span class="skill__nome">CSS3</span>
+              <span class="skill__valor" data-target="90">0%</span>
+            </div>
+            <div class="skill__barra">
+              <div class="skill__progresso" data-target="90" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__linha">
+              <span class="skill__nome">JavaScript</span>
+              <span class="skill__valor" data-target="88">0%</span>
+            </div>
+            <div class="skill__barra">
+              <div class="skill__progresso" data-target="88" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__linha">
+              <span class="skill__nome">Acessibilidade</span>
+              <span class="skill__valor" data-target="82">0%</span>
+            </div>
+            <div class="skill__barra">
+              <div class="skill__progresso" data-target="82" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="skill__linha">
+              <span class="skill__nome">Design Responsivo</span>
+              <span class="skill__valor" data-target="92">0%</span>
+            </div>
+            <div class="skill__barra">
+              <div class="skill__progresso" data-target="92" style="width: 0%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Contato -->
+    <section class="secao" id="contato">
+      <div class="container">
+        <header class="secao__cabecalho">
+          <h2 class="secao__titulo">Contato</h2>
+          <p class="secao__descricao">
+            Me conte sobre o que você precisa. Eu respondo o mais rápido possível.
+          </p>
+        </header>
+
+        <div class="grid-contato">
+          <!-- Card com links -->
+          <div class="card contato-info">
+            <h3 class="card__titulo">Onde me encontrar</h3>
+
+            <p class="card__texto">
+              Você pode adaptar os links abaixo com seus perfis reais.
+            </p>
+
+            <ul class="lista-links">
+              <li><strong>E-mail:</strong> <a class="link" href="mailto:ada.maria@email.com">ada.maria@email.com</a></li>
+              <li><strong>LinkedIn:</strong> <a class="link" href="#" target="_blank" rel="noopener">/in/ada-maria</a></li>
+              <li><strong>GitHub:</strong> <a class="link" href="#" target="_blank" rel="noopener">github.com/adamaria</a></li>
+            </ul>
+
+            <p class="mini">
+              💡 Dica: ter um e-mail profissional e um GitHub organizado ajuda muito na hora de fechar jobs.
+            </p>
+          </div>
+
+          <!-- Formulário (sem back-end; só feedback com JS) -->
+          <form class="card form" id="formContato">
+            <h3 class="card__titulo">Enviar mensagem</h3>
+
+            <label class="label" for="nome">Seu nome</label>
+            <input class="input" type="text" id="nome" name="nome" placeholder="Ex.: João Silva" required />
+
+            <label class="label" for="email">Seu e-mail</label>
+            <input class="input" type="email" id="email" name="email" placeholder="exemplo@email.com" required />
+
+            <label class="label" for="mensagem">Mensagem</label>
+            <textarea class="textarea" id="mensagem" name="mensagem" placeholder="Explique o que você precisa..." required></textarea>
+
+            <!-- Área onde o JS vai mostrar o feedback -->
+            <p class="feedback" id="feedback" aria-live="polite"></p>
+
+            <button class="btn btn--primario btn--full" type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="container rodape__conteudo">
+      <p>© <span id="ano"></span> • Portfólio de Ada Maria • Feito com HTML, CSS e JavaScript</p>
+
+      <!-- Botão de voltar ao topo -->
+      <a class="voltar-topo" href="#topo" aria-label="Voltar ao topo">↑</a>
+    </div>
+  </footer>
+
+  <!-- Conecta o JavaScript externo -->
+  <script src="script/script.js"></script>
+</body>
+</html>

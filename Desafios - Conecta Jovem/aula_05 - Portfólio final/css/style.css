@@ -1,0 +1,405 @@
+/* =========================
+   VARIÁVEIS (cores e tamanhos) 🎖️
+========================= */
+:root {
+    /* Cores principais (dark + neon) */
+    --bg: #07121b;
+    /* fundo principal */
+    --bg-2: #050c13;
+    /* variação do fundo */
+    --card: rgba(9, 21, 31, 0.78);
+    /* cartão com transparência */
+    --borda: rgba(255, 255, 255, 0.08);
+
+    --texto: #e8f0ff;
+    /* texto principal */
+    --texto-2: rgba(232, 240, 255, 0.72);
+
+    --neon: #18e0ff;
+    /* ciano */
+    --neon-2: #2dff8f;
+    /* verde */
+
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+    --raio: 16px;
+    /* bordas arredondadas */
+    --container: 1100px;
+    /* largura máxima do conteúdo */
+}
+
+
+/* ==============================
+        Configurações globais 🎖️
+============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* rolagem suave ao clicar nas âncoras */
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background:
+        radial-gradient(1200px 600px at 20% 0%,
+            rgba(24, 224, 255, 0.10),
+            transparent 55%),
+        radial-gradient(900px 500px at 80% 20%,
+            rgba(45, 255, 143, 0.08),
+            transparent 55%),
+        linear-gradient(180deg, var(--bg), var(--bg-2));
+    line-height: 1.6;
+}
+
+main {
+    flex: 1;
+}
+
+/* ==============================
+        Menu principal 🎖️
+============================== */
+
+/* Container central */
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 18px;
+}
+
+.topo {
+    position: sticky;
+    /* fica no topo ao rolar */
+    top: 0;
+    z-index: 10;
+    background: black;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--borda);
+}
+
+.topo img {
+    height: 35px;
+}
+
+.topo a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.topo__conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 12px 0;
+}
+
+#nome {
+    width: 450px;
+}
+
+/* Botão do menu (mobile) */
+.menu-toggle {
+    display: none;
+    /* só aparece em telas pequenas */
+    background: transparent;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.menu-toggle__bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 4px 0;
+    background: var(--texto);
+    opacity: 0.85;
+}
+
+/* Navegação */
+.nav__lista {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link {
+    color: var(--texto-2);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 8px 10px;
+    border-radius: 12px;
+    transition: background .2s ease, color .2s ease, transform .1s ease;
+}
+
+.nav__link:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--texto);
+    transform: translateY(-1px);
+}
+
+/* Link ativo (seção atual) */
+.nav__link.ativo {
+    color: var(--texto);
+    background: rgba(24, 224, 255, 0.12);
+    border: 1px solid rgba(24, 224, 255, 0.25);
+}
+
+
+/* ==============================
+        Máquina de escrever 🎖️
+============================== */
+
+.maquina-escrever {
+    font-family: monospace;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 1.2;
+    /* Define a altura da linha para precisão */
+    color: var(--texto);
+    width: 0;
+    border-right: 3px solid orange;
+    animation:
+        digitar 7s steps(35, end) infinite,
+        cursor 0.7s infinite;
+}
+
+
+
+/* Digitar e apagar */
+
+@keyframes digitar {
+
+    /* Início */
+    0% {
+        width: 0;
+    }
+
+    /* Digita */
+    35% {
+        width: 28ch;
+    }
+
+    /* Espera com o texto completo */
+    55% {
+        width: 28ch;
+    }
+
+    /* Apaga */
+    90% {
+        width: 0;
+    }
+
+    /* Reinicia */
+    100% {
+        width: 0;
+    }
+}
+
+/* Cursor piscando */
+
+@keyframes cursor {
+
+    0%,
+    49% {
+        border-color: orange;
+    }
+
+    50%,
+    100% {
+        border-color: transparent;
+    }
+}
+
+
+/* =========================
+   SEÇÕES
+   ========================= */
+.secao {
+    padding: 42px 0;
+}
+
+.secao__cabecalho {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.secao__titulo {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.secao__descricao {
+    margin: 8px auto 0;
+    max-width: 760px;
+    color: var(--texto-2);
+}
+
+/* =========================
+   PROJETOS
+========================= */
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    justify-content: center;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    padding: 18px;
+    box-shadow: var(--sombra);
+}
+
+.projeto__topo {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.tag {
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(24, 224, 255, 0.12);
+    border: 1px solid rgba(24, 224, 255, 0.22);
+    color: var(--texto);
+}
+
+.tag--outline {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--borda);
+    color: var(--texto-2);
+}
+
+.projeto__titulo {
+    margin: 0 0 8px;
+}
+
+.projeto__texto {
+    margin: 0 0 14px;
+    color: var(--texto-2);
+}
+
+.projeto__acoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.link {
+    color: var(--neon);
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0.92;
+}
+
+.link:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* =========================
+   PROJETOS - MOBILE
+========================= */
+
+@media (max-width: 900px) {
+    .grid-projetos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+        RODAPÉ 🎖️
+========================= */
+.rodape {
+    border-top: 1px solid var(--borda);
+    background: rgba(6, 12, 18, 0.75);
+    backdrop-filter: blur(10px);
+    padding: 16px 0;
+}
+
+.rodape__conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: rgba(232, 240, 255, 0.75);
+}
+
+.voltar-topo {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: var(--texto);
+    border: 1px solid var(--borda);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.voltar-topo:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+/* ==============================
+   RESPONSIVIDADE - MENU MOBILE
+============================== */
+
+@media (max-width: 900px) {
+
+    /* Botão do menu */
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    /* Menu fechado */
+    .nav {
+        position: absolute;
+        top: 60px;
+        right: 18px;
+        left: 18px;
+        background: rgba(6, 12, 18, 0.92);
+        border: 1px solid var(--borda);
+        border-radius: var(--raio);
+        padding: 10px;
+        display: none;
+    }
+
+    /* Menu aberto */
+    .nav.aberto {
+        display: block;
+    }
+
+    /* Itens do menu em coluna */
+    .nav__lista {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

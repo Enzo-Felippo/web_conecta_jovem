@@ -1,0 +1,28 @@
+/* CSS */
+
+/* Estilo da tabela */
+table {
+  width: 80%; /* largura da tabela */
+  border-collapse: collapse; /* une as bordas */
+  margin: 20px auto; /* centraliza na tela */
+  font-family: Arial, sans-serif; /* fonte padrão */
+}
+
+/* Cabeçalhos (th) e células (td) */
+th,
+td {
+  border: 1px solid #ccc; /* borda cinza clara */
+  padding: 10px; /* espaço interno */
+  text-align: center; /* centraliza o texto */
+}
+
+/* Cabeçalho da tabela */
+th {
+  background-color: #0077cc; /* fundo azul */
+  color: white; /* texto branco */
+}
+
+/* Linhas pares da tabela (efeito zebra) */
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* cor alternada */
+}

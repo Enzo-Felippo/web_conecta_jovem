@@ -1,0 +1,76 @@
+<!--
+  snake.html
+  Jogo da Cobrinha (Snake) com HTML5 + CSS3 + JavaScript.
+
+  Como usar:
+  1) Crie um arquivo chamado snake.html
+  2) Crie também snake.css e snake.js na mesma pasta
+  3) Abra o snake.html no navegador (clique duas vezes)
+
+  Observação:
+  - O "tabuleiro" do jogo é um <canvas> (uma área de desenho).
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Título que aparece na aba do navegador -->
+  <title>Snake Game — Jogo da Cobrinha</title>
+
+  <!-- Conecta o CSS externo -->
+  <link rel="stylesheet" href="css/snake.css" />
+</head>
+
+<body>
+  <!-- Cabeçalho com título e instruções rápidas -->
+  <header class="topo">
+    <h1>🐍 Snake Game (Jogo da Cobrinha)</h1>
+    <p>
+      Use as <strong>setas do teclado</strong> (ou <strong>W A S D</strong>) para mover.
+      Pegue a comida e não bata na parede nem em você!
+    </p>
+  </header>
+
+  <!-- Painel com pontuação e botões -->
+  <section class="painel" aria-label="Painel do jogo">
+    <div class="info">
+      Pontos: <span id="pontos">0</span>
+    </div>
+
+    <div class="info">
+      Melhor: <span id="melhor">0</span>
+    </div>
+
+    <div class="botoes">
+      <!-- Botão para iniciar/pausar -->
+      <button id="btnIniciar" class="btn">▶️ Iniciar</button>
+
+      <!-- Botão para reiniciar -->
+      <button id="btnReiniciar" class="btn" disabled>🔁 Reiniciar</button>
+    </div>
+  </section>
+
+  <!-- Área principal do jogo -->
+  <main class="area">
+    <!--
+      Canvas: o JavaScript desenha aqui.
+      width/height definem o tamanho "real" do desenho (em pixels).
+    -->
+    <canvas id="tela" width="480" height="480" aria-label="Área do jogo"></canvas>
+
+    <!-- Mensagens do jogo (ex.: “Game Over”) -->
+    <p id="mensagem" class="mensagem" aria-live="polite"></p>
+
+    <!-- Dica extra -->
+    <p class="dica">
+      💡 Dica: se estiver difícil, aumente o <code>TAMANHO_CELULA</code> ou diminua a <code>VELOCIDADE</code> no <code>snake.js</code>.
+    </p>
+  </main>
+
+  <!-- Conecta o JavaScript externo -->
+  <script src="script/snake.js"></script>
+</body>
+</html>

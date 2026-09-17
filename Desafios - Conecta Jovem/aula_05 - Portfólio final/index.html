@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfólio</title>
+</head>
+
+<body>
+    <header class="topo" id="topo">
+        <div class="container topo__conteudo">
+
+            <!-- Imagem da Logo -->
+            <div id="nome">
+                <a href="#inicio">
+                    <img id="logo" src="img/logo.png" alt="Minha logo">
+                    <p class="maquina-escrever">Enzo Felippo Lopes da Costa</p>
+                </a>
+            </div>
+
+            <!-- Botão do menu mobile (aparece em telas pequenas) -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir/fechar menu" aria-expanded="false">
+                <!-- Ícone simples feito com CSS (3 barrinhas) -->
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+            </button>
+
+            <!-- Navegação -->
+            <nav class="nav" id="nav">
+                <ul class="nav__lista">
+                    <!-- Cada link aponta para uma seção (âncora) -->
+                    <li><a class="nav__link ativo" href="#inicio">Início</a></li>
+                    <li><a class="nav__link" href="#projetos">Projetos</a></li>
+                    <li><a class="nav__link" href="#habilidades">Habilidades</a></li>
+                    <li><a class="nav__link" href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <span id="inicio"></span>
+        <!-- Seção: Projetos -->
+        <section class="secao" id="projetos">
+            <header class="secao__cabecalho">
+                <h2 class="secao__titulo">Projetos</h2>
+                <p class="secao__descricao">
+                    Alguns exemplos do que eu consigo construir no front-end.
+                </p>
+            </header>
+
+            <div class="grid-projetos">
+                <!-- Projeto 1 -->
+                <article class="card projeto">
+                    <div class="projeto__topo">
+                        <span class="tag">Landing Page</span>
+                        <span class="tag tag--outline">Responsivo</span>
+                    </div>
+
+                    <h3 class="projeto__titulo">Formulário para bruxas</h3>
+                    <p class="projeto__texto">
+                        Layout de um formulário para bruxas que querem aprender a fazer feitiços usando o caldeirão.
+                    </p>
+
+                    <div class="projeto__acoes">
+                        <!-- Links de exemplo (troque para seus links reais) -->
+                        <a class="link" href="../aula_04 - Tema 14 - Formulário para bruxas/index.html"
+                            aria-label="Abrir demonstração do projeto 1" target="_blank">Ver demonstração</a>
+
+                    </div>
+                </article>
+
+                <!-- Projeto 1 -->
+                <article class="card projeto">
+                    <div class="projeto__topo">
+                        <span class="tag">Landing Page</span>
+                        <span class="tag tag--outline">Responsivo</span>
+                    </div>
+
+                    <h3 class="projeto__titulo">Formulário para bruxas</h3>
+                    <p class="projeto__texto">
+                        Layout de um formulário para bruxas que querem aprender a fazer feitiços usando o caldeirão.
+                    </p>
+
+                    <div class="projeto__acoes">
+                        <!-- Links de exemplo (troque para seus links reais) -->
+                        <a class="link" href="../aula_04 - Tema 14 - Formulário para bruxas/index.html"
+                            aria-label="Abrir demonstração do projeto 1" target="_blank">Ver demonstração</a>
+
+                    </div>
+                </article>
+
+            </div>
+        </section>
+        <span id="habilidades"></span>
+        <span id="contato"></span>
+    </main>
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container rodape__conteudo">
+            <div>
+                <p>&copy; - Portfólio de Enzo Felippo Lopes da Costa - Feito com HTML e CSS</p>
+                <p>Feito em Setembro de 2026</p>
+            </div>
+
+            <!-- Botão de voltar ao topo -->
+            <a class="voltar-topo" href="#topo" aria-label="Voltar ao topo">↑</a>
+        </div>
+    </footer>
+    <!-- Conecta o JavaScript externo -->
+    <script src="script/script.js"></script>
+</body>
+
+</html>

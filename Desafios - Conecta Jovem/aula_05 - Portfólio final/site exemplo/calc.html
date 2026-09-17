@@ -1,0 +1,95 @@
+<!--
+  calc.html
+  Página HTML da calculadora.
+  Aqui fica a ESTRUTURA (o que existe na tela): título, campos, botões e área de resultado.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+
+  <!--
+    Ajusta o layout em celulares (responsividade básica).
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Calculadora Simples</title>
+
+  <!--
+    Conecta o arquivo CSS externo (aparência).
+  -->
+  <link rel="stylesheet" href="css/calc.css" />
+</head>
+
+<body>
+  <!--
+    Um "cartão" central para a calculadora ficar organizada.
+  -->
+  <main class="card">
+    <h1>🧮 Calculadora Simples</h1>
+    <p class="subtitulo">
+      Digite dois números e escolha a operação.
+    </p>
+
+    <!--
+      Grupo de campos (inputs) para números.
+      Usamos input type="number" para facilitar (teclado numérico no celular e validações básicas).
+    -->
+    <section class="campos" aria-label="Campos de números">
+      <div class="campo">
+        <!-- Label ajuda na acessibilidade e deixa claro o que preencher -->
+        <label for="num1">Número 1</label>
+        <input
+          type="number"
+          id="num1"
+          placeholder="Ex.: 10"
+          step="any"
+        />
+      </div>
+
+      <div class="campo">
+        <label for="num2">Número 2</label>
+        <input
+          type="number"
+          id="num2"
+          placeholder="Ex.: 5"
+          step="any"
+        />
+      </div>
+    </section>
+
+    <!--
+      Botões de operação.
+      Cada botão chama a função calcular() passando o operador.
+      (Quem faz a conta de verdade é o JavaScript no arquivo calc.js)
+    -->
+    <section class="botoes" aria-label="Operações">
+      <button type="button" class="btn" data-op="+">+</button>
+      <button type="button" class="btn" data-op="-">−</button>
+      <button type="button" class="btn" data-op="*">×</button>
+      <button type="button" class="btn" data-op="/">÷</button>
+
+      <!-- Botão extra para limpar tudo -->
+      <button type="button" class="btn limpar" id="btnLimpar">Limpar</button>
+    </section>
+
+    <!--
+      Área onde mostramos mensagens e resultado.
+      aria-live="polite" ajuda leitores de tela a perceberem mudanças no texto.
+    -->
+    <section class="saida" aria-label="Resultado">
+      <p id="mensagem" class="mensagem"></p>
+      <p class="resultado">
+        Resultado: <span id="resultado">—</span>
+      </p>
+    </section>
+  </main>
+
+  <!--
+    Conecta o JavaScript externo (interatividade / lógica).
+    Colocamos no final do body para garantir que os elementos já existam quando o JS rodar.
+  -->
+  <script src="script/calc.js"></script>
+</body>
+</html>
