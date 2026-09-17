@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Formulário: Curso de culinária para bruxas</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#">Cursos</a>
+            <a href="#">Blog</a>
+            <a href="#">Sobre</a>
+        </nav>
+        <nav>
+            <img src="img/logo.png" alt="logo">
+        </nav>
+    </header>
+    <main>
+        <form action="">
+            <h1>Curso de culinária para bruxas</h1>
+            <div class="conteiner">
+                <!--Campo do Nome-->
+                <label for="name">Nome: </label>
+                <div class="input">
+                    <input type="text" name="nome" id="nome" placeholder="Seu nome">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <!--Campo do Telefone-->
+                <label for="telefone">Telefone: </label>
+                <div class="input">
+                    <input type="tel" name="telefone" id="telefone" placeholder="(00) 0 0000-0000">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+
+            <div class="conteiner">
+                <!--Campo do Email-->
+                <label for="email">Email: </label>
+                <div class="input">
+                    <input type="email" name="email" id="email" placeholder="seuemail@gmail.com">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <!--Campo de calderão-->
+                <label for="caldeirao">Caldeirão: </label>
+                <div class="input">
+                    <select name="caldeirao" id="caldeirao">
+                        <option value="caldeirao_bruxa_tradicional">Caldeirão de bruxa tradicional</option>
+                        <option value="caldeirao_3_pes">Caldeirão com 3 pés</option>
+                        <option value="caldeirao_lua_crescente">Caldeirão com lua crescente</option>
+                        <option value="caldeirao_magico_com_fumaca">Caldeirão mágico com fumaça</option>
+                        <option value="caldeirao_com_alcas">Caldeirão com alças</option>
+                    </select>
+                    <i class="fa-solid fa-kitchen-set"></i>
+                </div>
+            </div>
+
+            <!--Campo de retrições-->
+            <label for="restricao">Restrições: </label>
+            <textarea name="restricao" id="restricao" cols="100" rows="10"
+                placeholder="Escreva suas restrições"></textarea>
+
+            <!--Botão de enviar-->
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer>
+        <nav>
+            <a href="#">Cursos</a>
+            <a href="#">Blog</a>
+            <a href="#">Sobre</a>
+        </nav>
+        <nav>
+            <img src="img/logo.png" alt="logo">
+        </nav>
+
+    </footer>
+</body>
+
+</html>

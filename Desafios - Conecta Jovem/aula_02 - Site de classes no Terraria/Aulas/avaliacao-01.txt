@@ -1,0 +1,19 @@
+Terça, 08/setembro/2026
+
+### 3 coisas que aprendi na semana passada
+
+1. Aprendi sobre como usar corretamente os IDs e classes do CSS.
+
+2. Aprendi melhor sobre tags de agrupamento de conteúdo, e não usar somente div.
+
+3. Aprendi a como nomear as pastas corretamente e quais pastas usar.
+
+### 2 curiosidades que aprendi sozinho sobre Desenvolvimento Web
+
+1. Aprendi um pouco de como usar display flex para posicionar conteúdos.
+
+2. Aprendi a como arredondar imagens e elementos usando o CSS.
+
+### 1 Dúvida
+
+1. Como faço para modificar o tamanho da imagem sem distorcê-la, mantendo a proporção?

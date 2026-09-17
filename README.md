@@ -1,12 +1,15 @@
 <div>
     <a href="https://sites.google.com/ic.ufmt.br/desenvolvimentoweb/">
-        <img alt="Site do Curso" src="https://img.shields.io/badge/Site_Curso-black?style=for-the-badge&logo=gitbook&logoColor=black&labelColor=%2300bfff">
+        <img alt="Site do Curso" src="https://img.shields.io/badge/Site_do_Curso-black?style=for-the-badge&logo=googledocs&logoColor=black&labelColor=%2300bfff">
     </a>
     <a href="https://sites.google.com/ic.ufmt.br/desenvolvimentoweb/quadro">
-        <img alt="Quadro Kanban do Curso" src="https://img.shields.io/badge/Quadro_kanban-black?style=for-the-badge&logo=gitbook&logoColor=black&labelColor=%2300bfff">
+        <img alt="Quadro Kanban do Curso" src="https://img.shields.io/badge/Quadro_kanban-black?style=for-the-badge&logo=thurgauerkantonalbank&logoColor=black&labelColor=%2388E788">
     </a>
         <a href="https://academy.loglabprojetos.com.br/course">
-        <img alt="Site do Conecta Jovem" src="https://img.shields.io/badge/Site_Conecta_Jovem-black?style=for-the-badge&logo=gitbook&logoColor=black&labelColor=%2300bfff">
+        <img alt="Site do Conecta Jovem" src="https://img.shields.io/badge/Site_Conecta_Jovem-black?style=for-the-badge&logo=gitbook&logoColor=black&labelColor=%23FFA500">
+    </a>
+    <a href="https://github.com/Enzo-Felippo" target="_blank">
+        <img alt="Meu GitHub" src="https://img.shields.io/badge/Meu_Github-black?style=for-the-badge&logo=github&logoColor=white&labelColor=rgb(78%2C%2039%2C%2099)">
     </a>
 </div>
 

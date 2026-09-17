@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Links em HTML</title>
+</head>
+
+<body>
+    <h1>Usando links externos</h1>
+
+    <p>A tag &lt;a&gt; aceita os seguintes valores para o atributo target:</p>
+    <ul>
+        <li><strong>_blank:</strong> Abre o link em uma nova aba ou janela do navegador.</li>
+        <li><strong>_parent:</strong> Abre o link no quadro ou frame pai (parent frame) da página atual. Se não houver frames, funciona como o _self.</li>
+        <li><strong>_self:</strong> Abre o link na mesma aba e frame onde ele foi clicado (comportamento padrão).</li>
+        <li><strong>_top:</strong> Abre o link no corpo completo da janela atual, cancelando todos os quadros (frames ou iframes) existentes.</li>
+    </ul>
+
+    <p>Você pode acessar o meu <a href="https://github.com/Enzo-Felippo/web_conecta_jovem" target="_blank" rel="external noopener noreferrer">repositório público no GitHub</a>.</p>
+    <p>Essa página é feita usando a aula do <a href="https://www.cursoemvideo.com/" target="_blank" rel="nofollow">Curso em Video</a></p>
+    <br>
+
+    <h2>O atributo rel</h2>
+    <p>O atributo <code>rel</code> define a relação entre a página atual e o documento vinculado. Enquanto o <code>target</code> controla onde o link abre, o <code>rel</code> informa aos navegadores e buscadores (SEO) o que aquele link representa e como ele deve ser tratado.</p>
+
+    <h3>Detalhes do parâmetro rel para links externos</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Valor do rel</th>
+                <th>Finalidade</th>
+                <th>Segurança / Performance / SEO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>external</code></td>
+                <td>Sinaliza explicitamente que o link leva a um site externo ou domínio diferente.</td>
+                <td><strong>Informativo / SEO:</strong> Não altera o comportamento visual, mas ajuda mecanismos de busca e leitores de tela a identificar links externos.</td>
+            </tr>
+            <tr>
+                <td><code>noopener</code></td>
+                <td>Impede que a nova página acesse o objeto <code>window.opener</code> da página de origem via JavaScript.</td>
+                <td><strong>Segurança crítica:</strong> Evita ataques do tipo Tabnabbing (onde a nova aba pode redirecionar a sua página original para um site malicioso). <em>Nota: Navegadores modernos aplicam isso automaticamente ao usar <code>target="_blank"</code>, mas mantê-lo é uma boa prática.</em></td>
+            </tr>
+            <tr>
+                <td><code>noreferrer</code></td>
+                <td>Bloqueia o envio do cabeçalho HTTP Referer para o site de destino.</td>
+                <td><strong>Privacidade &amp; Segurança:</strong> O site de destino não saberá de qual URL exata o usuário veio. Também inclui o comportamento do <code>noopener</code>.</td>
+            </tr>
+            <tr>
+                <td><code>nofollow</code></td>
+                <td>Orienta os motores de busca (Google, Bing) a não transferir autoridade/relevância de SEO para o link.</td>
+                <td><strong>SEO:</strong> Ideal para links patrocinados, de afiliados ou conteúdo não verificado.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Usando links internos</h1>
+    <p>Esse é um link para minha  <a href="segunda.html" target="_self" rel="next">outra página;</a></p>
+    <p>Esse é um link para <a href="../exer_005 - Listas/index.html" target="_self" rel="next">aula anteior</a> que está em outra página</p>
+    <p>Na outra página, o rel tem o valor "prev" (anteior) ao em vez de "next" (próximo)</p>
+
+    <h1>Links para download</h1>
+    <p><a href="download/Aula 1.pdf" type="application/pdf">Aula 1:</a> Link para download *PDF depende do navegador</p>
+    <p><a href="download/Aula 1.zip" type="application/zip">Aula 1:</a> Link para download</p>
+    <p>Para consultar todas as tags para download de aquivos acesse <a href="https://www.iana.org/assignments/media-types" target="_blank" rel="nofollow">iana.org</a></p>
+</body>
+
+</html>

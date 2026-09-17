@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Guia de HTML5</title>
+</head>
+
+<body>
+
+  <!-- ==========================================
+         CABEÇALHO
+    =========================================== -->
+
+  <header id="inicio">
+    <div class="header-container">
+      <h1>📚 Guia de HTML5</h1>
+
+      <p>
+        Página de estudos sobre semântica, formatação de textos,
+        listas, links, citações, códigos e outras características
+        fundamentais do HTML5.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- ==========================================
+         NAVEGAÇÃO
+    =========================================== -->
+
+  <nav>
+    <ul>
+      <li><a href="#semantica">Semântica</a></li>
+      <li><a href="#formatacao">Formatação</a></li>
+      <li><a href="#listas">Listas</a></li>
+      <li><a href="#links-externos">Links externos</a></li>
+      <li><a href="#links-internos">Links internos</a></li>
+      <li><a href="#downloads">Downloads</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ==========================================
+         CONTEÚDO
+    =========================================== -->
+
+  <main>
+
+
+    <!-- ======================================
+             SEMÂNTICA
+        ======================================= -->
+
+    <section id="semantica">
+
+      <h2>🧱 Semântica do HTML5</h2>
+
+      <p>
+        HTML5 foca em <strong>significado</strong>, e não apenas
+        na aparência do conteúdo. As tags semânticas ajudam o
+        navegador, mecanismos de busca e tecnologias assistivas
+        a entender a função de cada parte da página.
+      </p>
+
+
+      <article>
+        <h3>&lt;header&gt;</h3>
+
+        <p>
+          Define um cabeçalho. O conteúdo dentro dele faz parte
+          do cabeçalho de uma página ou seção.
+        </p>
+
+        <div class="example">
+          <code>
+                        &lt;header&gt;<br>
+                        &nbsp;&nbsp;&lt;h1&gt;Título da página&lt;/h1&gt;<br>
+                        &lt;/header&gt;
+                    </code>
+        </div>
+      </article>
+
+
+      <article>
+        <h3>&lt;nav&gt;</h3>
+
+        <p>
+          Representa uma área de navegação. É muito utilizada
+          para menus e conjuntos de links.
+        </p>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="#listas">Ir para listas</a>
+            </li>
+
+            <li>
+              <a href="#formatacao">Ir para formatação</a>
+            </li>
+          </ul>
+        </nav>
+      </article>
+
+
+      <article>
+        <h3>&lt;main&gt;</h3>
+
+        <p>
+          Representa o conteúdo principal da página, relacionado
+          diretamente ao tópico central ou à funcionalidade
+          principal do documento.
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;section&gt;</h3>
+
+        <p>
+          Representa uma seção temática da página.
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;article&gt;</h3>
+
+        <p>
+          Representa um conteúdo independente, como um artigo,
+          postagem de blog ou notícia.
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;aside&gt;</h3>
+
+        <p>
+          Representa um conteúdo relacionado indiretamente ao
+          conteúdo principal, como uma barra lateral,
+          informações complementares ou observações.
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;div&gt;</h3>
+
+        <p>
+          É um container genérico sem significado semântico
+          próprio. É muito utilizado para organizar elementos
+          e aplicar estilos.
+        </p>
+
+        <div class="tip">
+          💡 Use elementos semânticos quando eles representarem
+          corretamente o conteúdo. Use <code>&lt;div&gt;</code>
+          quando não existir um elemento semântico apropriado.
+        </div>
+      </article>
+
+
+      <article>
+        <h3>&lt;span&gt;</h3>
+
+        <p>
+          É um container genérico <strong>inline</strong>,
+          normalmente utilizado para estilizar ou identificar
+          pequenos trechos de texto.
+        </p>
+
+        <p>
+          Exemplo:
+          <span class="semantic">este trecho está dentro de um span.</span>
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;footer&gt;</h3>
+
+        <p>
+          Define um rodapé para uma página ou seção.
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;address&gt;</h3>
+
+        <p>
+          Representa informações de contato relacionadas ao
+          conteúdo ou responsável pela página.
+        </p>
+      </article>
+
+
+      <article>
+        <h3>Hierarquia de títulos</h3>
+
+        <p>
+          O HTML possui seis níveis de títulos, indo de
+          <code>&lt;h1&gt;</code> até
+          <code>&lt;h6&gt;</code>.
+        </p>
+
+        <h1>Título nível 1</h1>
+        <h2>Título nível 2</h2>
+        <h3>Título nível 3</h3>
+        <h4>Título nível 4</h4>
+        <h5>Título nível 5</h5>
+        <h6>Título nível 6</h6>
+
+        <div class="tip">
+          💡 Os níveis representam hierarquia de conteúdo.
+          Não escolha um título apenas porque ele "parece maior".
+          O CSS deve controlar a aparência.
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- ======================================
+             FORMATAÇÃO
+        ======================================= -->
+
+    <section id="formatacao">
+
+      <h2>✏️ Formatação de textos</h2>
+
+      <p>
+        HTML5 possui elementos que permitem indicar diferentes
+        significados para trechos de texto.
+      </p>
+
+
+      <article>
+        <h3>&lt;strong&gt; — importância</h3>
+
+        <p>
+          Indica que determinado conteúdo possui
+          <strong>forte importância</strong>.
+        </p>
+
+        <p>
+          É uma tag <span class="semantic">semântica</span>.
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;b&gt; — destaque visual</h3>
+
+        <p>
+          Produz um destaque visual em
+          <b>negrito</b>, mas sem indicar importância semântica.
+        </p>
+
+        <p>
+          É uma tag
+          <span class="non-semantic">não semântica</span>.
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;em&gt; — ênfase</h3>
+
+        <p>
+          Indica ênfase no conteúdo:
+          <em>este trecho possui ênfase.</em>
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;i&gt; — destaque visual em itálico</h3>
+
+        <p>
+          Produz visualmente
+          <i>itálico</i>, sem necessariamente representar ênfase.
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;ins&gt; — conteúdo inserido</h3>
+
+        <p>
+          Indica conteúdo que foi
+          <ins>inserido</ins> no documento.
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;u&gt; — destaque visual</h3>
+
+        <p>
+          Produz visualmente um
+          <u>sublinhado</u>.
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;mark&gt; — destaque contextual</h3>
+
+        <p>
+          A tag <mark>&lt;mark&gt;</mark> indica um trecho
+          destacado por sua relevância contextual.
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;del&gt; — conteúdo removido</h3>
+
+        <p>
+          Indica conteúdo que foi
+          <del>removido</del> ou marcado como excluído.
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;small&gt; — informação secundária</h3>
+
+        <p>
+          Representa informações secundárias, como observações,
+          avisos legais ou direitos autorais.
+        </p>
+
+        <p>
+          <small>Este é um exemplo de texto secundário.</small>
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;sup&gt; — sobrescrito</h3>
+
+        <p>
+          Utilizado para conteúdos que aparecem acima da linha
+          normal do texto.
+        </p>
+
+        <p>
+          Exemplo: x<sup>20</sup> + 3
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;sub&gt; — subscrito</h3>
+
+        <p>
+          Utilizado para conteúdos que aparecem abaixo da linha
+          normal do texto.
+        </p>
+
+        <p>
+          Exemplo: H<sub>2</sub>O
+        </p>
+      </article>
+
+
+      <article>
+        <h3>&lt;pre&gt; — texto pré-formatado</h3>
+
+        <p>
+          Mantém espaços e quebras de linha do conteúdo original.
+          É bastante utilizado junto com
+          <code>&lt;code&gt;</code> para apresentar códigos.
+        </p>
+
+        <div class="example">
+          <pre><code>print("Hello World!")</code></pre>
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- ======================================
+             CÓDIGO, CITAÇÕES E ABREVIAÇÕES
+        ======================================= -->
+
+    <section>
+
+      <h2>💻 Outras formatações</h2>
+
+
+      <article>
+        <h3>Código fonte — &lt;code&gt;</h3>
+
+        <p>
+          A tag <code>&lt;code&gt;</code> representa um trecho
+          de código.
+        </p>
+
+        <p>
+          Exemplo:
+          <code>print("Hello World!")</code>
+        </p>
+
+        <div class="example">
+          <pre><code>nome = input("Digite seu nome: ")
+print(f"Olá {nome}")</code></pre>
+        </div>
+      </article>
+
+
+      <article>
+        <h3>Citações — &lt;q&gt;</h3>
+
+        <p>
+          A tag <code>&lt;q&gt;</code> representa uma pequena
+          citação inserida dentro do texto.
+        </p>
+
+        <p>
+          Como diria o Chaves:
+          <q>Prefiro morrer do que perder a vida.</q>
+        </p>
+      </article>
+
+
+      <article>
+        <h3>Citações completas — &lt;blockquote&gt;</h3>
+
+        <p>
+          A tag <code>&lt;blockquote&gt;</code> representa uma
+          citação mais longa.
+        </p>
+
+        <p>
+          Segundo Jeff Noble, em seu livro
+          <em>HTML para Leigos</em>:
+        </p>
+
+        <blockquote cite="https://books.google.com.br/books?id=E8ZtDwAAQBAJ">
+          A diferença entre elementos inline e um bloco de texto
+          é importante. Os elementos HTML nesse capítulo descrevem
+          os blocos de texto.
+        </blockquote>
+      </article>
+
+
+      <article>
+        <h3>Abreviações — &lt;abbr&gt;</h3>
+
+        <p>
+          A tag <code>&lt;abbr&gt;</code> representa uma abreviação
+          ou acrônimo.
+        </p>
+
+        <p>
+          Estou estudando
+          <abbr title="HyperText Markup Language">HTML</abbr>
+          e
+          <abbr title="Cascading Style Sheets">CSS</abbr>.
+          Estou adorando!
+        </p>
+      </article>
+
+    </section>
+
+
+    <!-- ======================================
+             LISTAS
+        ======================================= -->
+
+    <section id="listas">
+
+      <h2>📋 Listas e suas características</h2>
+
+
+      <article>
+        <h3>Listas ordenadas</h3>
+
+        <p>
+          As listas ordenadas são representadas pela tag
+          <code>&lt;ol&gt;</code>.
+        </p>
+
+        <p>
+          Elas podem apresentar diferentes estilos de marcadores,
+          como números, letras e algarismos romanos.
+        </p>
+
+        <h4>Numérica</h4>
+
+        <ol>
+          <li>Vou tomar banho</li>
+          <li>Vou vestir roupa</li>
+          <li>Vou passar perfume</li>
+        </ol>
+
+
+        <h4>Romana maiúscula</h4>
+
+        <ol class="roman">
+          <li>Primeiro item</li>
+          <li>Segundo item</li>
+          <li>Terceiro item</li>
+        </ol>
+
+
+        <h4>Alfabética minúscula</h4>
+
+        <ol class="alphabetic">
+          <li>Primeiro item</li>
+          <li>Segundo item</li>
+          <li>Terceiro item</li>
+        </ol>
+
+        <div class="tip">
+          💡 Hoje é preferível controlar o visual das listas
+          através de CSS usando <code>list-style-type</code>.
+        </div>
+      </article>
+
+
+      <article>
+        <h3>Listas não ordenadas</h3>
+
+        <p>
+          As listas não ordenadas são representadas pela tag
+          <code>&lt;ul&gt;</code>.
+        </p>
+
+        <p>
+          O navegador utiliza marcadores para indicar os itens.
+        </p>
+
+        <ul>
+          <li>Jogo: Game</li>
+          <li>Brincar: Play</li>
+          <li>Forno: Oven</li>
+          <li>Fogão: Cooker</li>
+        </ul>
+
+
+        <h4>Marcador quadrado</h4>
+
+        <ul class="square">
+          <li>Terraria</li>
+          <li>Minecraft</li>
+          <li>Monster Hunter</li>
+        </ul>
+      </article>
+
+
+      <article>
+        <h3>Listas aninhadas</h3>
+
+        <p>
+          É possível colocar listas dentro de outras listas.
+          Isso permite criar diferentes níveis de informação.
+        </p>
+
+        <h4>Linguagens</h4>
+
+        <ol>
+          <li>
+            Antigas
+
+            <ol class="alphabetic nested-list">
+              <li>Clipper</li>
+              <li>Fortran</li>
+              <li>Delphi</li>
+            </ol>
+          </li>
+
+          <li>
+            Novas
+
+            <ol class="alphabetic nested-list" start="4">
+              <li>PHP</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>Kotlin</li>
+            </ol>
+          </li>
+        </ol>
+
+
+        <h4>Meus jogos favoritos</h4>
+
+        <ol>
+          <li>
+            PC
+
+            <ul class="square nested-list">
+              <li>Terraria</li>
+              <li>Minecraft</li>
+              <li>Monster Hunter</li>
+            </ul>
+          </li>
+
+          <li>
+            PlayStation 2
+
+            <ul class="square nested-list">
+              <li>Black</li>
+              <li>God of War</li>
+              <li>Metal Slug</li>
+            </ul>
+          </li>
+        </ol>
+      </article>
+
+
+      <article>
+        <h3>Listas de definições</h3>
+
+        <p>
+          As listas de definição utilizam três elementos:
+        </p>
+
+        <ul>
+          <li><code>&lt;dl&gt;</code> — lista de definições</li>
+          <li><code>&lt;dt&gt;</code> — termo</li>
+          <li><code>&lt;dd&gt;</code> — descrição</li>
+        </ul>
+
+
+        <dl>
+          <dt>HTML</dt>
+          <dd>
+            Linguagem de marcação utilizada para estruturar
+            páginas web.
+          </dd>
+
+          <dt>CSS</dt>
+          <dd>
+            Linguagem utilizada para estilizar e apresentar
+            documentos HTML.
+          </dd>
+
+          <dt>JavaScript</dt>
+          <dd>
+            Linguagem de programação utilizada para adicionar
+            comportamento e interatividade às páginas.
+          </dd>
+        </dl>
+      </article>
+
+    </section>
+
+
+    <!-- ======================================
+             LINKS EXTERNOS
+        ======================================= -->
+
+    <section id="links-externos">
+
+      <h2>🔗 Links externos</h2>
+
+      <p>
+        A tag <code>&lt;a&gt;</code> é utilizada para criar
+        hyperlinks.
+      </p>
+
+
+      <article>
+        <h3>O atributo target</h3>
+
+        <p>
+          O atributo <code>target</code> determina onde o link
+          será aberto.
+        </p>
+
+        <ul>
+          <li>
+            <strong>_blank:</strong>
+            abre o link em uma nova aba ou janela.
+          </li>
+
+          <li>
+            <strong>_self:</strong>
+            abre o link no contexto atual. É o comportamento padrão.
+          </li>
+
+          <li>
+            <strong>_parent:</strong>
+            abre o link no contexto pai.
+          </li>
+
+          <li>
+            <strong>_top:</strong>
+            abre o link no contexto completo da janela.
+          </li>
+        </ul>
+
+
+        <p>
+          Meu
+          <a class="link-example" href="https://github.com/Enzo-Felippo/web_conecta_jovem" target="_blank"
+            rel="external noopener noreferrer">
+            repositório público no GitHub
+          </a>.
+        </p>
+
+
+        <p>
+          Esta página é baseada nas aulas do
+          <a class="link-example" href="https://www.cursoemvideo.com/" target="_blank" rel="nofollow">
+            Curso em Vídeo
+          </a>.
+        </p>
+      </article>
+
+
+      <article>
+        <h3>O atributo rel</h3>
+
+        <p>
+          O atributo <code>rel</code> define a relação entre
+          a página atual e o documento vinculado.
+        </p>
+
+        <p>
+          Enquanto <code>target</code> controla onde o link
+          será aberto, <code>rel</code> fornece informações
+          sobre a relação e o tratamento do link.
+        </p>
+
+
+        <div class="table-container">
+
+          <table>
+
+            <thead>
+              <tr>
+                <th>Valor</th>
+                <th>Finalidade</th>
+                <th>Observação</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>
+                  <code>external</code>
+                </td>
+
+                <td>
+                  Indica que o link aponta para um
+                  recurso externo.
+                </td>
+
+                <td>
+                  É principalmente uma informação
+                  semântica.
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <code>noopener</code>
+                </td>
+
+                <td>
+                  Impede o acesso da nova página ao
+                  <code>window.opener</code>.
+                </td>
+
+                <td>
+                  Relacionado à segurança ao utilizar
+                  <code>target="_blank"</code>.
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <code>noreferrer</code>
+                </td>
+
+                <td>
+                  Impede o envio do cabeçalho
+                  HTTP Referer.
+                </td>
+
+                <td>
+                  Aumenta a privacidade da navegação
+                  e também implica o comportamento
+                  de <code>noopener</code>.
+                </td>
+              </tr>
+
+
+              <tr>
+                <td>
+                  <code>nofollow</code>
+                </td>
+
+                <td>
+                  Indica aos mecanismos de busca que
+                  o link não deve ser tratado como
+                  uma recomendação normal.
+                </td>
+
+                <td>
+                  É especialmente usado em situações
+                  relacionadas a SEO, publicidade ou
+                  conteúdo não confiável.
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+    <!-- ======================================
+             LINKS INTERNOS
+        ======================================= -->
+
+    <section id="links-internos">
+
+      <h2>📄 Links internos</h2>
+
+      <p>
+        Links internos apontam para outras páginas ou documentos
+        pertencentes ao mesmo projeto/site.
+      </p>
+
+
+      <article>
+
+        <h3>Outra página do projeto</h3>
+
+        <p>
+          <a class="link-example" href="segunda.html" target="_self" rel="next">
+            Ir para minha outra página
+          </a>
+        </p>
+
+
+        <h3>Página em outra pasta</h3>
+
+        <p>
+          <a class="link-example" href="../exercicios/exer_006 - Links/index.html" target="_self" rel="prev">
+            Ir para a aula anterior
+          </a>
+        </p>
+
+        <div class="tip">
+          💡 Em uma estrutura de páginas, <code>rel="next"</code>
+          e <code>rel="prev"</code> podem descrever a relação
+          entre documentos sequenciais.
+        </div>
+
+      </article>
+
+    </section>
+
+
+    <!-- ======================================
+             DOWNLOADS
+        ======================================= -->
+
+    <section id="downloads">
+
+      <h2>⬇️ Links para download</h2>
+
+      <p>
+        A tag <code>&lt;a&gt;</code> também pode apontar para
+        arquivos disponíveis para download.
+      </p>
+
+
+      <article>
+
+        <h3>PDF</h3>
+
+        <p>
+          <a class="link-example" href="download/Aula 1.pdf" type="application/pdf" download>
+            Aula 1.pdf
+          </a>
+        </p>
+
+
+        <h3>Arquivo ZIP</h3>
+
+        <p>
+          <a class="link-example" href="download/Aula 1.zip" type="application/zip" download>
+            Aula 1.zip
+          </a>
+        </p>
+
+
+        <p>
+          Para consultar os tipos MIME registrados, consulte
+          a lista da IANA:
+        </p>
+
+        <p>
+          <a class="link-example" href="https://www.iana.org/assignments/media-types" target="_blank"
+            rel="nofollow noopener noreferrer">
+            IANA Media Types
+          </a>
+        </p>
+
+      </article>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==========================================
+         RODAPÉ
+    =========================================== -->
+
+  <footer>
+
+    <div class="footer-container">
+
+      <h2>&lt;footer&gt;</h2>
+
+      <p>
+        Esta seção representa o rodapé da página.
+        Geralmente contém informações complementares,
+        contato, direitos autorais ou links adicionais.
+      </p>
+
+      <address>
+        Rua 25, Pedra 90 - Coxipó da Ponte,
+        Cuiabá - MT
+      </address>
+
+      <p style="margin-top: 20px;">
+        <small>
+          Página criada para estudos de HTML5 usando ChatGPT com base nos 6 primeiros módulos do Curso em Video
+        </small>
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

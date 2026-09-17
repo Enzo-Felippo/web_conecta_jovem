@@ -1,0 +1,172 @@
+/* ==============================
+        Configurações globais 🎖️
+============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==============================
+        Cabeçalho
+============================== */
+
+header {
+    margin: 20px;
+    display: flex;
+}
+
+header div {
+    padding: 30px;
+}
+
+header div h1 {
+    margin-bottom: 20px;
+}
+
+header a {
+    color: inherit;
+}
+
+/* ==============================
+        Efeito do bloco de textos 
+============================== */
+
+.blocos {
+    display: flex;
+    gap: 20px;
+}
+
+.blocos p {
+    position: relative;
+    overflow: hidden;
+
+    flex: 1;
+    padding: 25px;
+    margin: 0;
+
+    border-radius: 15px;
+    color: #E8F1F2;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    background: #082F35;
+    z-index: 1;
+}
+
+.blocos p::before {
+    content: "";
+
+    position: absolute;
+    width: 200%;
+    height: 200%;
+
+    top: -50%;
+    left: -50%;
+
+    background:
+        radial-gradient(ellipse at center,
+            #1e5e5e 0%,
+            #0b4649 20%,
+            transparent 55%);   
+
+    animation: onda 8s ease-in-out infinite alternate;
+
+    z-index: -1;
+}
+
+@keyframes onda {
+    0% {
+        transform: translate(-20%, -10%) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(20%, 10%) rotate(10deg);
+    }
+
+    100% {
+        transform: translate(-10%, 20%) rotate(-10deg);
+    }
+}
+
+/* ==============================
+        Imagem de Perfil 
+============================== */
+
+.perfil {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ==============================
+        Máquina de escrever 🎖️
+   ============================== */
+
+.maquina-escrever {
+    font-family: monospace;
+    font-size: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    border-right: 3px solid orange;
+    animation:
+        digitar 7s steps(35, end) infinite,
+        cursor 0.7s infinite;
+}
+
+/* ==============================
+        Digitar e apagar
+============================== */
+
+@keyframes digitar {
+
+    /* Início */
+    0% {
+        width: 0;
+    }
+
+    /* Digita */
+    35% {
+        width: 28ch;
+    }
+
+    /* Espera com o texto completo */
+    55% {
+        width: 28ch;
+    }
+
+    /* Apaga */
+    90% {
+        width: 0;
+    }
+
+    /* Reinicia */
+    100% {
+        width: 0;
+    }
+}
+
+/* ==============================
+        Cursor piscando
+============================== */
+
+@keyframes cursor {
+
+    0%,
+    49% {
+        border-color: orange;
+    }
+
+    50%,
+    100% {
+        border-color: transparent;
+    }
+}
+
+#skillicons img{
+    height: 35px;
+}
