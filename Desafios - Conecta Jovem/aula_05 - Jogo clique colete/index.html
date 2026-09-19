@@ -1,0 +1,97 @@
+<!--
+    Código criado pela Profª. Dra. Karen Ribeiro (karen@ic.ufmt.br) para fins educacionais e não comerciais, sob licença CC BY-NC-SA 4.0. 
+    Jogo: Clique e Colete (Pegue o item)
+    Objetivo: clicar nos itens que surgem na área de jogo antes que sumam.
+    Estrutura: HTML semântico + áreas para placar, tempo e controles.
+    Como personalizar:
+    - Troque textos, emojis e instruções.
+    - O tema visual (cores, imagem do item, tamanho etc.) fica no style.css.
+    - As regras do jogo (tempo, velocidade, pontos) ficam no script.js.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Clique e Colete — Conexão 5</title>
+
+  <!-- Vincula o CSS externo -->
+  <link rel="stylesheet" href="css/estilo.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div class="chuva-chocolate" aria-hidden="true">
+    <span>🍪</span>
+    <span>🍩</span>
+    <span>🍫</span>
+    <span>🍩</span>
+    <span>🍪</span>
+    <span>🍫</span>
+    <span>🍩</span>
+    <span>🍫</span>
+    <span>🍫</span>
+    <span>🍪</span>
+    <span>🍫</span>
+    <span>🍫</span>
+    <span>🍩</span>
+    <span>🍫</span>
+    <span>🍪</span>
+    <span>🍫</span>
+    <span>🍩</span>
+    <span>🍫</span>
+    <span>🍪</span>
+    <span>🍩</span>
+    <span>🍫</span>
+  </div>
+  <!-- Cabeçalho: título e explicação rápida do jogo -->
+  <header class="topo">
+    <h1>&#x1F36B; Clique e Colete</h1>
+    <p> Clique nas barras de chocolate que aparecerem na área de jogo antes que desapareçam. </p>
+  </header>
+
+  <!-- Barra de status com placar e temporizador -->
+  <section class="painel" aria-label="Painel do jogo">
+    <!-- Placar: mostra a pontuação atual -->
+    <div class="placar" aria-live="polite">
+      Pontos: <span id="pontos">0</span>
+    </div>
+
+    <!-- Temporizador: conta regressiva do tempo de jogo -->
+    <div class="tempo" aria-live="polite">
+      Tempo: <span id="tempo">30</span>s
+    </div>
+
+    <!-- Controles: iniciar e reiniciar -->
+    <div class="controles">
+      <!-- Botão principal para iniciar a partida -->
+      <button id="btnIniciar" class="btn">&#x25B6;&#xFE0F; Iniciar</button>
+
+      <!-- Botão para reiniciar (zera tudo e começa de novo) -->
+      <button id="btnReiniciar" class="btn" disabled>&#x1F501; Reiniciar</button>
+    </div>
+  </section>
+
+  <!-- Área do jogo: os itens aparecem aqui em posições aleatórias -->
+  <!-- role="application" indica uma região interativa; tabindex permite foco via teclado -->
+  <main id="areaJogo" class="area-jogo" role="application" tabindex="0" aria-label="Área de jogo">
+    <!-- Os itens são criados dinamicamente via JavaScript -->
+    <!-- A área é posicionada relativamente; os itens, absolutamente -->
+    <p class="dica">Dica: clique rápido nas barras de chocolate! &#x1F446;</p>
+  </main>
+
+  <!-- Rodapé com instruções e créditos -->
+  <footer class="rodape">
+    <p>
+      Tema personalizável: troque a imagem da barra de chocolate no <code>style.css</code> e ajuste tempo/velocidade no
+      <code>script.js</code>.
+    </p>
+  </footer>
+
+  <!-- Vincula o JavaScript do jogo -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

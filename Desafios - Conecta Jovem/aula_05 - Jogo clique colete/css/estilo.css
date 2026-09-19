@@ -1,0 +1,334 @@
+/*
+  style.css
+  Código criado pela Profª. Dra. Karen Ribeiro (karen@ic.ufmt.br) para fins educacionais e não comerciais, sob licença CC BY-NC-SA 4.0. 
+  Aparência do jogo: layout, cores, tipografia e visual do "item".
+  Como personalizar facilmente:
+    - Troque a imagem do item alterando a variável --item-image (link ou arquivo local).
+    - Ajuste o tamanho do item em --item-size.
+    - Mude as cores de fundo e botões nas variáveis de cor.
+*/
+
+:root {
+  /* Paleta e tamanhos (ajuste para mudar o "tema") */
+  --cor-fundo: #fffaf0;
+  --cor-cartao: #ffffff;
+  --cor-borda: #f0dfb0;
+  --cor-texto: #3d3218;
+  --cor-destaque: #e6a700;
+  --cor-destaque-escuro: #a87500;
+
+  /* Tamanho do item (maior = mais fácil de clicar) */
+  --item-size: 64px;
+
+  /* Imagem do item (troque para mudar o tema!)
+     Exemplos:
+       url('../imagens/maca.png')
+       url('https://img.icons8.com/emoji/96/red-apple.png')
+  */
+  --item-image: url('https://img.icons8.com/?size=100&id=vGmusj6T9C1A&format=png&color=000000');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  line-height: 1.5;
+  padding: 16px;
+}
+
+/* Cabeçalho */
+.topo {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.topo h1 {
+  margin: 0 0 8px;
+}
+
+/* Painel (placar, tempo, botões) */
+.painel {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+  gap: 12px;
+  max-width: 960px;
+  margin: 0 auto 16px;
+  background: var(--cor-cartao);
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+
+.placar,
+.tempo {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.controles {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.btn {
+  background: var(--cor-destaque);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform .12s ease, background .2s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--cor-destaque-escuro);
+  transform: translateY(-1px);
+}
+
+/* Área do jogo */
+.area-jogo {
+  position: relative;
+  /* Referência para posicionar os itens */
+  max-width: 960px;
+  height: 480px;
+  /* Altura da arena (ajuste à vontade) */
+  margin: 0 auto;
+  background: #ffffff;
+  border: 2px dashed var(--cor-borda);
+  border-radius: 16px;
+  overflow: hidden;
+  /* Esconde qualquer parte dos itens que ultrapasse a borda */
+}
+
+.area-jogo .dica {
+  text-align: center;
+  color: #63738a;
+  margin-top: 18px;
+}
+
+/* O item coletável (maçã por padrão) */
+.item {
+  position: absolute;
+  width: var(--item-size);
+  height: var(--item-size);
+  background-image: var(--item-image);
+  background-size: contain;
+  /* A imagem se ajusta sem distorcer */
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  /* Mostra que é clicável */
+  user-select: none;
+  /* Evita seleção de imagem/texto ao clicar rápido */
+  transition: transform 0.08s ease;
+  /* Micro feedback ao clicar */
+}
+
+/* Efeito ao clicar (dá uma "amassadinha") */
+.item:active {
+  transform: scale(0.92);
+}
+
+/* Responsivo: em telas menores, diminui a arena e o item */
+@media (max-width: 600px) {
+  .area-jogo {
+    height: 360px;
+  }
+
+  :root {
+    --item-size: 56px;
+  }
+}
+
+/* =====================================================
+   CHUVA DE CHOCOLATE — FUNDO ANIMADO
+   ===================================================== */
+
+.chuva-chocolate {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.chuva-chocolate span {
+  position: absolute;
+  top: -80px;
+  font-size: 32px;
+  opacity: 0.35;
+  animation: chocolate-caindo linear infinite;
+}
+
+
+/* Animação da queda */
+
+@keyframes chocolate-caindo {
+
+  from {
+    transform: translateY(-100px) rotate(0deg);
+  }
+
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+
+}
+
+
+/* Cada chocolate possui uma posição,
+   velocidade e tamanho diferentes */
+
+.chuva-chocolate span:nth-child(1) {
+  left: 5%;
+  animation-duration: 7s;
+  animation-delay: -2s;
+}
+
+.chuva-chocolate span:nth-child(2) {
+  left: 12%;
+  font-size: 25px;
+  animation-duration: 9s;
+  animation-delay: -5s;
+}
+
+.chuva-chocolate span:nth-child(3) {
+  left: 18%;
+  font-size: 38px;
+  animation-duration: 6s;
+  animation-delay: -1s;
+}
+
+.chuva-chocolate span:nth-child(4) {
+  left: 25%;
+  animation-duration: 8s;
+  animation-delay: -6s;
+}
+
+.chuva-chocolate span:nth-child(5) {
+  left: 31%;
+  font-size: 28px;
+  animation-duration: 10s;
+  animation-delay: -3s;
+}
+
+.chuva-chocolate span:nth-child(6) {
+  left: 38%;
+  font-size: 40px;
+  animation-duration: 7s;
+  animation-delay: -7s;
+}
+
+.chuva-chocolate span:nth-child(7) {
+  left: 44%;
+  animation-duration: 9s;
+  animation-delay: -4s;
+}
+
+.chuva-chocolate span:nth-child(8) {
+  left: 50%;
+  font-size: 27px;
+  animation-duration: 6s;
+  animation-delay: -2s;
+}
+
+.chuva-chocolate span:nth-child(9) {
+  left: 56%;
+  font-size: 36px;
+  animation-duration: 8s;
+  animation-delay: -8s;
+}
+
+.chuva-chocolate span:nth-child(10) {
+  left: 62%;
+  animation-duration: 10s;
+  animation-delay: -5s;
+}
+
+.chuva-chocolate span:nth-child(11) {
+  left: 68%;
+  font-size: 30px;
+  animation-duration: 7s;
+  animation-delay: -1s;
+}
+
+.chuva-chocolate span:nth-child(12) {
+  left: 74%;
+  font-size: 39px;
+  animation-duration: 9s;
+  animation-delay: -6s;
+}
+
+.chuva-chocolate span:nth-child(13) {
+  left: 80%;
+  animation-duration: 6s;
+  animation-delay: -3s;
+}
+
+.chuva-chocolate span:nth-child(14) {
+  left: 85%;
+  font-size: 26px;
+  animation-duration: 8s;
+  animation-delay: -7s;
+}
+
+.chuva-chocolate span:nth-child(15) {
+  left: 90%;
+  font-size: 35px;
+  animation-duration: 10s;
+  animation-delay: -4s;
+}
+
+.chuva-chocolate span:nth-child(16) {
+  left: 95%;
+  animation-duration: 7s;
+  animation-delay: -2s;
+}
+
+.chuva-chocolate span:nth-child(17) {
+  left: 15%;
+  font-size: 24px;
+  animation-duration: 11s;
+  animation-delay: -9s;
+}
+
+.chuva-chocolate span:nth-child(18) {
+  left: 47%;
+  font-size: 32px;
+  animation-duration: 9s;
+  animation-delay: -5s;
+}
+
+.chuva-chocolate span:nth-child(19) {
+  left: 72%;
+  font-size: 25px;
+  animation-duration: 11s;
+  animation-delay: -8s;
+}
+
+.chuva-chocolate span:nth-child(20) {
+  left: 88%;
+  font-size: 30px;
+  animation-duration: 8s;
+  animation-delay: -6s;
+}
