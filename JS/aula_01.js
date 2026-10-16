@@ -45,3 +45,70 @@ if (notaMedia < 5){
 }else{
     console.log('Aluno(a) passou com boa nota')
 }
+
+// Desafio da aula: Calcular o IMC e mostrar sua condição
+/*
+    IMC = peso / (altura * altura)
+
+    - Abaixo do peso: < 18.5
+    - Peso normal: >= 18.5 e < 25
+    - Acima do peso: >= 25 e < 30
+    - Obeso: >= 30 e < 40
+    - Obesidade grave: >= 40
+
+    console.log(`O IMC de ${imc.toFixed(1)} é `)
+*/
+
+const altura = 1.75;
+const peso = 62.5;
+const imc = peso / Math.pow(altura,2); // (altura * altura)
+
+if (imc < 18.5){
+    console.log(`O IMC de ${imc.toFixed(1)} é considerado abaixo do peso`)
+} else if (imc < 25){
+    console.log(`O IMC de ${imc.toFixed(1)} é considerado peso normal`)
+} else if (imc < 30){
+    console.log(`O IMC de ${imc.toFixed(1)} é considerado acima do peso`)
+} else if (imc < 40){
+    console.log(`O IMC de ${imc.toFixed(1)} é considerado obesidade`)
+} else {
+    console.log(`O IMC de ${imc.toFixed(1)} é considerado obesidade grave`)
+}
+
+
+
+// Desafio da aula: Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o preço normal de etiqueta e a escolha da condição de pagamento.
+/*
+Utilize os códigos da tabela a seguir para ler qual a condição de pagamento escolhida e efetuar o cálculo
+adequado.
+
+Código Condição de pagamento:
+A vista Débito, recebe 10% de desconto;
+- À vista no Dinheiro ou PIX, recebe 15% de desconto;
+Em duas vezes, preco normal de etiqueta sem juros;
+Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
+*/
+
+const tipoDePagamento = 'débito'; // 'à vista', 'pix', 'crédito', 'débito'
+const valorEtiqueta = 100;
+let parcelamento;
+let descontoOuJuros;
+let valorTotal;
+
+if (tipoDePagamento === 'crédito'){
+    parcelamento = 1;
+    if (parcelamento < 3){
+        descontoOuJuros = 1;
+    }else{
+        descontoOuJuros = 1.10;
+    }
+}else if (tipoDePagamento === 'pix' || tipoDePagamento === 'à vista'){
+    descontoOuJuros = 0.85;
+}else if (tipoDePagamento === 'débito'){
+    descontoOuJuros = 0.90;
+}
+
+valorTotal = valorEtiqueta * descontoOuJuros
+
+console.log(`Valor padrão: ${valorEtiqueta.toFixed(2)}`)
+console.log(`Valor para ${tipoDePagamento}: ${valorTotal.toFixed(2)}`)
